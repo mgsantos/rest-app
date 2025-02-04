@@ -1,0 +1,1125 @@
+Initialized native services in: /Users/mgomes2/.gradle/native
+Initialized jansi services in: /Users/mgomes2/.gradle/native
+Received JVM installation metadata from '/opt/homebrew/Cellar/openjdk@17/17.0.13/libexec/openjdk.jdk/Contents/Home': {JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.13/libexec/openjdk.jdk/Contents/Home, JAVA_VERSION=17.0.13, JAVA_VENDOR=Homebrew, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=17.0.13+0, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=17.0.13+0, VM_VENDOR=Homebrew, OS_ARCH=aarch64}
+Found daemon DaemonInfo{pid=57332, address=[b093800c-7fb9-4a23-b48d-156a8c3f31f6 port:59998, addresses:[/127.0.0.1]], state=Idle, lastBusy=1731161907017, context=DefaultDaemonContext[uid=01b43738-4228-463e-a02d-b8dba3e76e6e,javaHome=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home,javaVersion=8,javaVendor=Temurin,daemonRegistryDir=/Users/mgomes2/.gradle/daemon,pid=57332,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{jvmCriteria=/opt/homebrew/Cellar/openjdk@17/17.0.13/libexec/openjdk.jdk/Contents/Home (no JDK specified, using current Java home), daemonOpts=[--add-opens=java.base/java.util=ALL-UNNAMED, --add-opens=java.base/java.lang=ALL-UNNAMED, --add-opens=java.base/java.lang.invoke=ALL-UNNAMED, --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED, --add-opens=java.base/java.nio.charset=ALL-UNNAMED, --add-opens=java.base/java.net=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED, -XX:MaxMetaspaceSize=384m, -XX:+HeapDumpOnOutOfMemoryError, -Xms256m, -Xmx512m, -Dfile.encoding=UTF-8, -Duser.country=US, -Duser.language=en, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=01b43738-4228-463e-a02d-b8dba3e76e6e,javaHome=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home,javaVersion=8,javaVendor=Temurin,daemonRegistryDir=/Users/mgomes2/.gradle/daemon,pid=57332,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 60511). The daemon log file: /Users/mgomes2/.gradle/daemon/8.10.2/daemon-60511.out.log
+Starting 8th build in daemon [uptime: 18 mins 40.23 secs, performance: 100%, GC rate: 0.00/s, heap usage: 6% of 512 MiB, non-heap usage: 25% of 384 MiB]
+Using 12 worker leases.
+Now considering [/Users/mgomes2/git/bitbucket/aim/aim1] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/Users/mgomes2/git/bitbucket/aim/aim1/settings.gradle'.
+Projects loaded. Root project using build file '/Users/mgomes2/git/bitbucket/aim/aim1/build.gradle'.
+Included projects: [root project 'aim1']
+
+> Configure project :
+Evaluating root project 'aim1' using build file '/Users/mgomes2/git/bitbucket/aim/aim1/build.gradle'.
+Found locally available resource with matching checksum: [https://plugins.gradle.org/m2/org/springframework/boot/org.springframework.boot.gradle.plugin/3.3.5/org.springframework.boot.gradle.plugin-3.3.5.pom, /Users/mgomes2/.gradle/caches/modules-2/files-2.1/org.springframework.boot/org.springframework.boot.gradle.plugin/3.3.5/8c60d45f12f52fc14579eee027818cb798fedee4/org.springframework.boot.gradle.plugin-3.3.5.pom]
+Resource missing. [HTTP HEAD: https://plugins.gradle.org/m2/org/springframework/boot/org.springframework.boot.gradle.plugin/3.3.5/org.springframework.boot.gradle.plugin-3.3.5.jar]
+Found locally available resource with matching checksum: [https://plugins.gradle.org/m2/io/spring/dependency-management/io.spring.dependency-management.gradle.plugin/1.1.6/io.spring.dependency-management.gradle.plugin-1.1.6.pom, /Users/mgomes2/.gradle/caches/modules-2/files-2.1/io.spring.dependency-management/io.spring.dependency-management.gradle.plugin/1.1.6/27851fd48b09523adc9d90db89790e67d6c4dd62/io.spring.dependency-management.gradle.plugin-1.1.6.pom]
+Resource missing. [HTTP HEAD: https://plugins.gradle.org/m2/io/spring/dependency-management/io.spring.dependency-management.gradle.plugin/1.1.6/io.spring.dependency-management.gradle.plugin-1.1.6.jar]
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-gradle-plugin/3.3.5/spring-boot-gradle-plugin-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:33:19 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-gradle-plugin/3.3.5/spring-boot-gradle-plugin-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:33:19 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/io/spring/gradle/dependency-management-plugin/1.1.6/dependency-management-plugin-1.1.6.pom is up-to-date (lastModified: Mon Jul 08 13:06:38 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/io/spring/gradle/dependency-management-plugin/1.1.6/dependency-management-plugin-1.1.6.module is up-to-date (lastModified: Mon Jul 08 13:06:38 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-loader-tools/3.3.5/spring-boot-loader-tools-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:19:49 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:10:00 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/apache/commons/commons-compress/1.25.0/commons-compress-1.25.0.pom is up-to-date (lastModified: Sun Nov 12 23:15:59 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-buildpack-platform/3.3.5/spring-boot-buildpack-platform-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:20:14 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:10:01 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/apache/commons/commons-parent/64/commons-parent-64.pom is up-to-date (lastModified: Fri Oct 06 16:59:25 CEST 2023).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-buildpack-platform/3.3.5/spring-boot-buildpack-platform-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:20:14 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-loader-tools/3.3.5/spring-boot-loader-tools-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:19:50 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/apache/apache/30/apache-30.pom is up-to-date (lastModified: Sun Jun 11 18:49:47 CEST 2023).
+Cached resource https://plugins.gradle.org/m2/org/junit/junit-bom/5.10.0/junit-bom-5.10.0.pom is up-to-date (lastModified: Sun Jul 23 14:52:34 CEST 2023).
+Cached resource https://plugins.gradle.org/m2/org/junit/junit-bom/5.10.0/junit-bom-5.10.0.module is up-to-date (lastModified: Sun Jul 23 14:52:34 CEST 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/client5/httpclient5/5.3.1/httpclient5-5.3.1.pom is up-to-date (lastModified: Sun Jan 21 10:52:48 CET 2024).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 02:31:52 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.14.2/jackson-module-parameter-names-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 03:02:21 CET 2023).
+Cached resource https://plugins.gradle.org/m2/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.pom is up-to-date (lastModified: Sat Jan 14 13:21:51 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.pom is up-to-date (lastModified: Sun May 12 08:05:11 CEST 2019).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/client5/httpclient5-parent/5.3.1/httpclient5-parent-5.3.1.pom is up-to-date (lastModified: Sun Jan 21 10:52:24 CET 2024).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-modules-java8/2.14.2/jackson-modules-java8-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 03:02:20 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/jackson-base/2.14.2/jackson-base-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 00:44:58 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/httpcomponents-parent/13/httpcomponents-parent-13.pom is up-to-date (lastModified: Sat Oct 29 13:56:15 CEST 2022).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/jackson-bom/2.14.2/jackson-bom-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 00:44:46 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/apache/27/apache-27.pom is up-to-date (lastModified: Sun Jul 10 11:20:11 CEST 2022).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/jackson-parent/2.14/jackson-parent-2.14.pom is up-to-date (lastModified: Sat Nov 05 21:10:10 CET 2022).
+Cached resource https://plugins.gradle.org/m2/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.pom is up-to-date (lastModified: Sun Nov 05 17:49:36 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/oss-parent/48/oss-parent-48.pom is up-to-date (lastModified: Tue Sep 27 04:21:40 CEST 2022).
+Cached resource https://plugins.gradle.org/m2/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.module is up-to-date (lastModified: Sun Nov 05 17:49:37 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.module is up-to-date (lastModified: Sun Jan 29 02:31:46 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.14.2/jackson-module-parameter-names-2.14.2.module is up-to-date (lastModified: Sun Jan 29 03:02:15 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:57 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:57 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 00:51:29 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 01:54:47 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2.module is up-to-date (lastModified: Sun Jan 29 00:51:30 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.module is up-to-date (lastModified: Sun Jan 29 01:54:47 CET 2023).
+Cached resource https://plugins.gradle.org/m2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.pom is up-to-date (lastModified: Sat Jan 14 13:21:41 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/core5/httpcore5-h2/5.2.4/httpcore5-h2-5.2.4.pom is up-to-date (lastModified: Fri Nov 24 20:02:43 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/core5/httpcore5/5.2.4/httpcore5-5.2.4.pom is up-to-date (lastModified: Fri Nov 24 20:02:22 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom is up-to-date (lastModified: Tue Feb 08 14:33:51 CET 2022).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/core5/httpcore5-parent/5.2.4/httpcore5-parent-5.2.4.pom is up-to-date (lastModified: Fri Nov 24 20:01:47 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom is up-to-date (lastModified: Tue Feb 08 14:33:41 CET 2022).
+Cached resource https://plugins.gradle.org/m2/org/junit/junit-bom/5.9.3/junit-bom-5.9.3.pom is up-to-date (lastModified: Wed Apr 26 08:27:55 CEST 2023).
+Cached resource https://plugins.gradle.org/m2/org/junit/junit-bom/5.9.3/junit-bom-5.9.3.module is up-to-date (lastModified: Wed Apr 26 08:27:56 CEST 2023).
+Cached resource https://plugins.gradle.org/m2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom is up-to-date (lastModified: Fri Mar 31 06:55:48 CEST 2017).
+Cached resource https://plugins.gradle.org/m2/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.pom is up-to-date (lastModified: Tue Dec 18 19:37:00 CET 2018).
+Cached resource https://plugins.gradle.org/m2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom is up-to-date (lastModified: Mon Mar 07 13:42:48 CET 2011).
+Cached resource https://plugins.gradle.org/m2/org/antlr/antlr4-master/4.7.2/antlr4-master-4.7.2.pom is up-to-date (lastModified: Tue Dec 18 19:36:49 CET 2018).
+Cached resource https://plugins.gradle.org/m2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom is up-to-date (lastModified: Mon Jan 27 20:15:21 CET 2014).
+Cached resource https://plugins.gradle.org/m2/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.jar is up-to-date (lastModified: Sun May 12 08:05:10 CEST 2019).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-loader-tools/3.3.5/spring-boot-loader-tools-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:19:50 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.14.2/jackson-module-parameter-names-2.14.2.jar is up-to-date (lastModified: Sun Jan 29 03:02:20 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/commons/commons-compress/1.25.0/commons-compress-1.25.0.jar is up-to-date (lastModified: Sun Nov 12 23:16:00 CET 2023).
+Cached resource https://plugins.gradle.org/m2/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.jar is up-to-date (lastModified: Sat Jan 14 13:21:48 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-gradle-plugin/3.3.5/spring-boot-gradle-plugin-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:33:19 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-buildpack-platform/3.3.5/spring-boot-buildpack-platform-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:20:14 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/client5/httpclient5/5.3.1/httpclient5-5.3.1.jar is up-to-date (lastModified: Sun Jan 21 10:52:47 CET 2024).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.jar is up-to-date (lastModified: Sun Jan 29 02:31:51 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:10:01 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:57 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/io/spring/gradle/dependency-management-plugin/1.1.6/dependency-management-plugin-1.1.6.jar is up-to-date (lastModified: Mon Jul 08 13:06:37 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar is up-to-date (lastModified: Tue Feb 08 14:33:50 CET 2022).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.jar is up-to-date (lastModified: Sun Jan 29 01:54:46 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.jar is up-to-date (lastModified: Tue Dec 18 19:36:59 CET 2018).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2.jar is up-to-date (lastModified: Sun Jan 29 00:51:28 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/core5/httpcore5-h2/5.2.4/httpcore5-h2-5.2.4.jar is up-to-date (lastModified: Fri Nov 24 20:02:41 CET 2023).
+Cached resource https://plugins.gradle.org/m2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar is up-to-date (lastModified: Sat Jan 14 13:21:39 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar is up-to-date (lastModified: Fri Mar 31 06:55:47 CEST 2017).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/core5/httpcore5/5.2.4/httpcore5-5.2.4.jar is up-to-date (lastModified: Fri Nov 24 20:02:20 CET 2023).
+Transforming spring-boot-gradle-plugin-3.3.5.jar (org.springframework.boot:spring-boot-gradle-plugin:3.3.5) with InstrumentationAnalysisTransform
+Transforming dependency-management-plugin-1.1.6.jar (io.spring.gradle:dependency-management-plugin:1.1.6) with InstrumentationAnalysisTransform
+Transforming spring-boot-buildpack-platform-3.3.5.jar (org.springframework.boot:spring-boot-buildpack-platform:3.3.5) with InstrumentationAnalysisTransform
+Transforming spring-boot-loader-tools-3.3.5.jar (org.springframework.boot:spring-boot-loader-tools:3.3.5) with InstrumentationAnalysisTransform
+Transforming commons-compress-1.25.0.jar (org.apache.commons:commons-compress:1.25.0) with InstrumentationAnalysisTransform
+Transforming spring-core-6.1.14.jar (org.springframework:spring-core:6.1.14) with InstrumentationAnalysisTransform
+Transforming jackson-annotations-2.14.2.jar (com.fasterxml.jackson.core:jackson-annotations:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-core-2.14.2.jar (com.fasterxml.jackson.core:jackson-core:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-module-parameter-names-2.14.2.jar (com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-databind-2.14.2.jar (com.fasterxml.jackson.core:jackson-databind:2.14.2) with InstrumentationAnalysisTransform
+Transforming jna-platform-5.13.0.jar (net.java.dev.jna:jna-platform:5.13.0) with InstrumentationAnalysisTransform
+Transforming httpclient5-5.3.1.jar (org.apache.httpcomponents.client5:httpclient5:5.3.1) with InstrumentationAnalysisTransform
+Transforming tomlj-1.0.0.jar (org.tomlj:tomlj:1.0.0) with InstrumentationAnalysisTransform
+Transforming spring-jcl-6.1.14.jar (org.springframework:spring-jcl:6.1.14) with InstrumentationAnalysisTransform
+Transforming jna-5.13.0.jar (net.java.dev.jna:jna:5.13.0) with InstrumentationAnalysisTransform
+Transforming httpcore5-h2-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5-h2:5.2.4) with InstrumentationAnalysisTransform
+Transforming httpcore5-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5:5.2.4) with InstrumentationAnalysisTransform
+Transforming slf4j-api-1.7.36.jar (org.slf4j:slf4j-api:1.7.36) with InstrumentationAnalysisTransform
+Transforming antlr4-runtime-4.7.2.jar (org.antlr:antlr4-runtime:4.7.2) with InstrumentationAnalysisTransform
+Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with InstrumentationAnalysisTransform
+Transforming spring-boot-gradle-plugin-3.3.5.jar (org.springframework.boot:spring-boot-gradle-plugin:3.3.5) with InstrumentationAnalysisTransform
+Transforming spring-boot-gradle-plugin-3.3.5.jar (org.springframework.boot:spring-boot-gradle-plugin:3.3.5) with MergeInstrumentationAnalysisTransform
+Transforming dependency-management-plugin-1.1.6.jar (io.spring.gradle:dependency-management-plugin:1.1.6) with InstrumentationAnalysisTransform
+Transforming dependency-management-plugin-1.1.6.jar (io.spring.gradle:dependency-management-plugin:1.1.6) with MergeInstrumentationAnalysisTransform
+Transforming spring-boot-buildpack-platform-3.3.5.jar (org.springframework.boot:spring-boot-buildpack-platform:3.3.5) with InstrumentationAnalysisTransform
+Transforming spring-boot-gradle-plugin-3.3.5.jar (org.springframework.boot:spring-boot-gradle-plugin:3.3.5) with ExternalDependencyInstrumentingArtifactTransform
+Transforming spring-boot-buildpack-platform-3.3.5.jar (org.springframework.boot:spring-boot-buildpack-platform:3.3.5) with MergeInstrumentationAnalysisTransform
+Transforming dependency-management-plugin-1.1.6.jar (io.spring.gradle:dependency-management-plugin:1.1.6) with ExternalDependencyInstrumentingArtifactTransform
+Transforming spring-boot-loader-tools-3.3.5.jar (org.springframework.boot:spring-boot-loader-tools:3.3.5) with InstrumentationAnalysisTransform
+Transforming spring-boot-loader-tools-3.3.5.jar (org.springframework.boot:spring-boot-loader-tools:3.3.5) with MergeInstrumentationAnalysisTransform
+Transforming spring-boot-buildpack-platform-3.3.5.jar (org.springframework.boot:spring-boot-buildpack-platform:3.3.5) with ExternalDependencyInstrumentingArtifactTransform
+Transforming commons-compress-1.25.0.jar (org.apache.commons:commons-compress:1.25.0) with InstrumentationAnalysisTransform
+Transforming commons-compress-1.25.0.jar (org.apache.commons:commons-compress:1.25.0) with MergeInstrumentationAnalysisTransform
+Transforming spring-core-6.1.14.jar (org.springframework:spring-core:6.1.14) with InstrumentationAnalysisTransform
+Transforming spring-core-6.1.14.jar (org.springframework:spring-core:6.1.14) with MergeInstrumentationAnalysisTransform
+Transforming spring-boot-loader-tools-3.3.5.jar (org.springframework.boot:spring-boot-loader-tools:3.3.5) with ExternalDependencyInstrumentingArtifactTransform
+Transforming commons-compress-1.25.0.jar (org.apache.commons:commons-compress:1.25.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jackson-annotations-2.14.2.jar (com.fasterxml.jackson.core:jackson-annotations:2.14.2) with InstrumentationAnalysisTransform
+Transforming spring-core-6.1.14.jar (org.springframework:spring-core:6.1.14) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jackson-annotations-2.14.2.jar (com.fasterxml.jackson.core:jackson-annotations:2.14.2) with MergeInstrumentationAnalysisTransform
+Transforming jackson-core-2.14.2.jar (com.fasterxml.jackson.core:jackson-core:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-core-2.14.2.jar (com.fasterxml.jackson.core:jackson-core:2.14.2) with MergeInstrumentationAnalysisTransform
+Transforming jackson-module-parameter-names-2.14.2.jar (com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-module-parameter-names-2.14.2.jar (com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.2) with MergeInstrumentationAnalysisTransform
+Transforming jackson-core-2.14.2.jar (com.fasterxml.jackson.core:jackson-core:2.14.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jackson-databind-2.14.2.jar (com.fasterxml.jackson.core:jackson-databind:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-annotations-2.14.2.jar (com.fasterxml.jackson.core:jackson-annotations:2.14.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jackson-databind-2.14.2.jar (com.fasterxml.jackson.core:jackson-databind:2.14.2) with MergeInstrumentationAnalysisTransform
+Transforming jackson-module-parameter-names-2.14.2.jar (com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jna-platform-5.13.0.jar (net.java.dev.jna:jna-platform:5.13.0) with InstrumentationAnalysisTransform
+Transforming jna-platform-5.13.0.jar (net.java.dev.jna:jna-platform:5.13.0) with MergeInstrumentationAnalysisTransform
+Transforming httpclient5-5.3.1.jar (org.apache.httpcomponents.client5:httpclient5:5.3.1) with InstrumentationAnalysisTransform
+Transforming httpclient5-5.3.1.jar (org.apache.httpcomponents.client5:httpclient5:5.3.1) with MergeInstrumentationAnalysisTransform
+Transforming tomlj-1.0.0.jar (org.tomlj:tomlj:1.0.0) with InstrumentationAnalysisTransform
+Transforming tomlj-1.0.0.jar (org.tomlj:tomlj:1.0.0) with MergeInstrumentationAnalysisTransform
+Transforming jackson-databind-2.14.2.jar (com.fasterxml.jackson.core:jackson-databind:2.14.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming httpclient5-5.3.1.jar (org.apache.httpcomponents.client5:httpclient5:5.3.1) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jna-platform-5.13.0.jar (net.java.dev.jna:jna-platform:5.13.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming tomlj-1.0.0.jar (org.tomlj:tomlj:1.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming spring-jcl-6.1.14.jar (org.springframework:spring-jcl:6.1.14) with InstrumentationAnalysisTransform
+Transforming spring-jcl-6.1.14.jar (org.springframework:spring-jcl:6.1.14) with MergeInstrumentationAnalysisTransform
+Transforming jna-5.13.0.jar (net.java.dev.jna:jna:5.13.0) with InstrumentationAnalysisTransform
+Transforming jna-5.13.0.jar (net.java.dev.jna:jna:5.13.0) with MergeInstrumentationAnalysisTransform
+Transforming httpcore5-h2-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5-h2:5.2.4) with InstrumentationAnalysisTransform
+Transforming spring-jcl-6.1.14.jar (org.springframework:spring-jcl:6.1.14) with ExternalDependencyInstrumentingArtifactTransform
+Transforming httpcore5-h2-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5-h2:5.2.4) with MergeInstrumentationAnalysisTransform
+Transforming httpcore5-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5:5.2.4) with InstrumentationAnalysisTransform
+Transforming httpcore5-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5:5.2.4) with MergeInstrumentationAnalysisTransform
+Transforming slf4j-api-1.7.36.jar (org.slf4j:slf4j-api:1.7.36) with InstrumentationAnalysisTransform
+Transforming slf4j-api-1.7.36.jar (org.slf4j:slf4j-api:1.7.36) with MergeInstrumentationAnalysisTransform
+Transforming antlr4-runtime-4.7.2.jar (org.antlr:antlr4-runtime:4.7.2) with InstrumentationAnalysisTransform
+Transforming jna-5.13.0.jar (net.java.dev.jna:jna:5.13.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming httpcore5-h2-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5-h2:5.2.4) with ExternalDependencyInstrumentingArtifactTransform
+Transforming httpcore5-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5:5.2.4) with ExternalDependencyInstrumentingArtifactTransform
+Transforming antlr4-runtime-4.7.2.jar (org.antlr:antlr4-runtime:4.7.2) with MergeInstrumentationAnalysisTransform
+Transforming slf4j-api-1.7.36.jar (org.slf4j:slf4j-api:1.7.36) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with InstrumentationAnalysisTransform
+Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with MergeInstrumentationAnalysisTransform
+Transforming antlr4-runtime-4.7.2.jar (org.antlr:antlr4-runtime:4.7.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with ExternalDependencyInstrumentingArtifactTransform
+Applying dependency management to configuration 'annotationProcessor' in project 'aim1'
+Applying dependency management to configuration 'apiElements' in project 'aim1'
+Applying dependency management to configuration 'archives' in project 'aim1'
+Applying dependency management to configuration 'bootArchives' in project 'aim1'
+Applying dependency management to configuration 'compileClasspath' in project 'aim1'
+Applying dependency management to configuration 'compileOnly' in project 'aim1'
+Applying dependency management to configuration 'default' in project 'aim1'
+Applying dependency management to configuration 'developmentOnly' in project 'aim1'
+Applying dependency management to configuration 'implementation' in project 'aim1'
+Applying dependency management to configuration 'mainSourceElements' in project 'aim1'
+Applying dependency management to configuration 'productionRuntimeClasspath' in project 'aim1'
+Applying dependency management to configuration 'runtimeClasspath' in project 'aim1'
+Applying dependency management to configuration 'runtimeElements' in project 'aim1'
+Applying dependency management to configuration 'runtimeOnly' in project 'aim1'
+Applying dependency management to configuration 'testAndDevelopmentOnly' in project 'aim1'
+Applying dependency management to configuration 'testAnnotationProcessor' in project 'aim1'
+Applying dependency management to configuration 'testCompileClasspath' in project 'aim1'
+Applying dependency management to configuration 'testCompileOnly' in project 'aim1'
+Applying dependency management to configuration 'testImplementation' in project 'aim1'
+Applying dependency management to configuration 'testResultsElementsForTest' in project 'aim1'
+Applying dependency management to configuration 'testRuntimeClasspath' in project 'aim1'
+Applying dependency management to configuration 'testRuntimeOnly' in project 'aim1'
+All projects evaluated.
+Task name matched 'clean'
+Task name matched 'build'
+Selected primary task 'clean' from project :
+Selected primary task 'build' from project :
+Resolving global dependency management for project 'aim1'
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/3.3.5/spring-boot-dependencies-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:20:04 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/activemq/activemq-bom/6.1.3/activemq-bom-6.1.3.pom is up-to-date (lastModified: Fri Aug 02 06:49:16 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/activemq/artemis-bom/2.33.0/artemis-bom-2.33.0.pom is up-to-date (lastModified: Tue Mar 19 22:05:17 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/activemq/artemis-project/2.33.0/artemis-project-2.33.0.pom is up-to-date (lastModified: Tue Mar 19 22:05:15 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/apache/31/apache-31.pom is up-to-date (lastModified: Wed Nov 08 23:14:57 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/assertj/assertj-bom/3.25.3/assertj-bom-3.25.3.pom is up-to-date (lastModified: Sun Feb 04 22:54:53 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/3.4.2/zipkin-reporter-bom-3.4.2.pom is up-to-date (lastModified: Thu Sep 19 05:12:12 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/6.0.3/brave-bom-6.0.3.pom is up-to-date (lastModified: Thu Apr 11 02:15:24 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/cassandra/java-driver-bom/4.18.1/java-driver-bom-4.18.1.pom is up-to-date (lastModified: Mon May 20 18:46:24 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/4.0.5/jaxb-bom-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:01 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.9/project-1.0.9.pom is up-to-date (lastModified: Wed Oct 25 18:33:56 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/groovy/groovy-bom/4.0.23/groovy-bom-4.0.23.pom is up-to-date (lastModified: Mon Sep 09 14:19:43 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/groovy/groovy-bom/4.0.23/groovy-bom-4.0.23.module is up-to-date (lastModified: Mon Sep 09 14:19:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/infinispan/infinispan-bom/15.0.10.Final/infinispan-bom-15.0.10.Final.pom is up-to-date (lastModified: Fri Oct 04 17:06:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/infinispan/infinispan-build-configuration-parent/15.0.10.Final/infinispan-build-configuration-parent-15.0.10.Final.pom is up-to-date (lastModified: Fri Oct 04 17:07:00 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/43/jboss-parent-43.pom is up-to-date (lastModified: Mon Jan 08 16:10:32 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.17.2/jackson-bom-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 18:48:48 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.17/jackson-parent-2.17.pom is up-to-date (lastModified: Tue Mar 12 04:34:41 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/58/oss-parent-58.pom is up-to-date (lastModified: Mon Feb 19 22:49:14 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/glassfish/jersey/jersey-bom/3.1.9/jersey-bom-3.1.9.pom is up-to-date (lastModified: Mon Oct 07 12:58:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/jetty/ee10/jetty-ee10-bom/12.0.14/jetty-ee10-bom-12.0.14.pom is up-to-date (lastModified: Mon Sep 30 16:37:08 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/12.0.14/jetty-bom-12.0.14.pom is up-to-date (lastModified: Mon Sep 30 16:36:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.5/junit-bom-5.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:18 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.5/junit-bom-5.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:21 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-bom/1.9.25/kotlin-bom-1.9.25.pom is up-to-date (lastModified: Fri Jul 19 10:59:25 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.8.1/kotlinx-coroutines-bom-1.8.1.pom is up-to-date (lastModified: Fri May 10 12:17:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-bom/1.6.3/kotlinx-serialization-bom-1.6.3.pom is up-to-date (lastModified: Fri Feb 16 16:07:05 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-bom/2.23.1/log4j-bom-2.23.1.pom is up-to-date (lastModified: Wed Mar 06 13:32:43 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/10.6.0/logging-parent-10.6.0.pom is up-to-date (lastModified: Thu Jan 11 11:15:57 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.13.6/micrometer-bom-1.13.6.pom is up-to-date (lastModified: Mon Oct 14 23:50:41 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bom/1.3.5/micrometer-tracing-bom-1.3.5.pom is up-to-date (lastModified: Tue Oct 15 00:50:21 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/5.11.0/mockito-bom-5.11.0.pom is up-to-date (lastModified: Fri Mar 01 10:01:25 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.114.Final/netty-bom-4.1.114.Final.pom is up-to-date (lastModified: Tue Oct 01 14:58:50 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom is up-to-date (lastModified: Mon Mar 07 13:42:48 CET 2011).
+Cached resource https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp-bom/4.12.0/okhttp-bom-4.12.0.pom is up-to-date (lastModified: Tue Oct 17 04:22:43 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp-bom/4.12.0/okhttp-bom-4.12.0.module is up-to-date (lastModified: Tue Oct 17 04:22:44 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-bom/1.37.0/opentelemetry-bom-1.37.0.pom is up-to-date (lastModified: Fri Apr 05 20:06:18 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-bom/1.37.0/opentelemetry-bom-1.37.0.module is up-to-date (lastModified: Fri Apr 05 20:06:18 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/prometheus/prometheus-metrics-bom/1.2.1/prometheus-metrics-bom-1.2.1.pom is up-to-date (lastModified: Thu Apr 04 22:48:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/prometheus/client_java/1.2.1/client_java-1.2.1.pom is up-to-date (lastModified: Thu Apr 04 22:48:44 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/prometheus/simpleclient_bom/0.16.0/simpleclient_bom-0.16.0.pom is up-to-date (lastModified: Wed Jun 15 23:22:02 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/io/prometheus/parent/0.16.0/parent-0.16.0.pom is up-to-date (lastModified: Wed Jun 15 23:17:40 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/pulsar/pulsar-bom/3.2.4/pulsar-bom-3.2.4.pom is up-to-date (lastModified: Mon Jul 29 18:03:05 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom is up-to-date (lastModified: Sun Dec 11 20:18:54 CET 2022).
+Cached resource https://repo.maven.apache.org/maven2/com/querydsl/querydsl-bom/5.1.0/querydsl-bom-5.1.0.pom is up-to-date (lastModified: Mon Jan 29 02:03:03 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2023.0.11/reactor-bom-2023.0.11.pom is up-to-date (lastModified: Tue Oct 15 12:32:04 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2023.0.11/reactor-bom-2023.0.11.module is up-to-date (lastModified: Tue Oct 15 12:32:05 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/rest-assured/rest-assured-bom/5.4.0/rest-assured-bom-5.4.0.pom is up-to-date (lastModified: Fri Dec 08 11:17:33 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/io/rsocket/rsocket-bom/1.1.3/rsocket-bom-1.1.3.pom is up-to-date (lastModified: Wed Sep 14 13:46:02 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-bom/4.19.1/selenium-bom-4.19.1.pom is up-to-date (lastModified: Fri Mar 29 08:19:15 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp-bom/3.1.7/spring-amqp-bom-3.1.7.pom is up-to-date (lastModified: Mon Aug 19 22:01:02 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp-bom/3.1.7/spring-amqp-bom-3.1.7.module is up-to-date (lastModified: Mon Aug 19 22:01:02 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/batch/spring-batch-bom/5.1.2/spring-batch-bom-5.1.2.pom is up-to-date (lastModified: Wed May 22 12:30:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-bom/2024.0.5/spring-data-bom-2024.0.5.pom is up-to-date (lastModified: Fri Oct 18 11:56:21 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.14/spring-framework-bom-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.14/spring-framework-bom-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/6.3.5/spring-integration-bom-6.3.5.pom is up-to-date (lastModified: Wed Oct 23 15:13:48 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/6.3.5/spring-integration-bom-6.3.5.module is up-to-date (lastModified: Wed Oct 23 15:13:48 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/pulsar/spring-pulsar-bom/1.1.5/spring-pulsar-bom-1.1.5.pom is up-to-date (lastModified: Tue Oct 22 05:58:43 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/pulsar/spring-pulsar-bom/1.1.5/spring-pulsar-bom-1.1.5.module is up-to-date (lastModified: Tue Oct 22 05:58:43 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/restdocs/spring-restdocs-bom/3.0.2/spring-restdocs-bom-3.0.2.pom is up-to-date (lastModified: Mon Oct 21 15:19:00 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/6.3.4/spring-security-bom-6.3.4.pom is up-to-date (lastModified: Mon Oct 21 19:26:52 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/6.3.4/spring-security-bom-6.3.4.module is up-to-date (lastModified: Mon Oct 21 19:26:52 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/3.3.3/spring-session-bom-3.3.3.pom is up-to-date (lastModified: Mon Oct 21 22:40:03 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/3.3.3/spring-session-bom-3.3.3.module is up-to-date (lastModified: Mon Oct 21 22:40:04 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/ws/spring-ws-bom/4.0.11/spring-ws-bom-4.0.11.pom is up-to-date (lastModified: Fri May 17 12:18:01 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers-bom/1.19.8/testcontainers-bom-1.19.8.pom is up-to-date (lastModified: Wed May 08 23:57:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:17:53 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.7.4/postgresql-42.7.4.pom is up-to-date (lastModified: Thu Aug 22 15:59:44 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-jpa/3.3.5/spring-boot-starter-data-jpa-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:19:09 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:17:53 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-jpa/3.3.5/spring-boot-starter-data-jpa-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:19:09 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.pom is up-to-date (lastModified: Sat Dec 16 00:05:38 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.module is up-to-date (lastModified: Sat Dec 16 00:05:39 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:17:59 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:46 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:17:59 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:19:43 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.1.14/spring-web-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:48 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:19:43 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.1.14/spring-web-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:49 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:18:32 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:18:32 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.5.3.Final/hibernate-core-6.5.3.Final.pom is up-to-date (lastModified: Wed Sep 18 18:35:17 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-jpa/3.3.5/spring-data-jpa-3.3.5.pom is up-to-date (lastModified: Fri Oct 18 12:03:46 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.3.5/spring-boot-starter-jdbc-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:18:40 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:10:05 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-aop/3.3.5/spring-boot-starter-aop-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:19:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.3.5/spring-boot-starter-jdbc-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:18:41 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-jpa-parent/3.3.5/spring-data-jpa-parent-3.3.5.pom is up-to-date (lastModified: Fri Oct 18 12:03:40 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:10:05 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-aop/3.3.5/spring-boot-starter-aop-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:19:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/build/spring-data-parent/3.3.5/spring-data-parent-3.3.5.pom is up-to-date (lastModified: Fri Oct 18 11:56:38 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/build/spring-data-build/3.3.5/spring-data-build-3.3.5.pom is up-to-date (lastModified: Fri Oct 18 11:56:36 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:20:18 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.pom is up-to-date (lastModified: Tue Jun 14 13:30:18 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:10:00 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.2/snakeyaml-2.2.pom is up-to-date (lastModified: Sun Aug 27 10:26:37 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:18:28 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom is up-to-date (lastModified: Tue Feb 23 19:00:23 CET 2021).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:20:18 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:10:01 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:18:28 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:20:27 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:20:27 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 19:45:33 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 19:45:42 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 19:15:55 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 19:45:31 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-modules-java8/2.17.2/jackson-modules-java8-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 19:45:32 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.17.2/jackson-base-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 18:49:01 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom is up-to-date (lastModified: Sun Feb 04 09:35:24 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module is up-to-date (lastModified: Sun Feb 04 09:35:25 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.module is up-to-date (lastModified: Fri Jul 05 19:15:54 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.module is up-to-date (lastModified: Fri Jul 05 19:45:39 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.module is up-to-date (lastModified: Fri Jul 05 19:45:38 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.module is up-to-date (lastModified: Fri Jul 05 19:45:37 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31.pom is up-to-date (lastModified: Thu Oct 03 21:18:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.pom is up-to-date (lastModified: Thu Oct 03 21:17:44 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31.pom is up-to-date (lastModified: Thu Oct 03 21:18:18 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:10:04 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6.pom is up-to-date (lastModified: Mon Oct 14 23:50:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:10:04 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:59 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:10:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.1.14/spring-context-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:10:03 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:59 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:10:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.1.14/spring-context-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:10:03 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.pom is up-to-date (lastModified: Sat May 11 08:29:55 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:56 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.pom is up-to-date (lastModified: Sat Nov 04 13:47:31 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:56 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.pom is up-to-date (lastModified: Thu Jan 26 16:39:39 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.pom is up-to-date (lastModified: Fri Feb 25 12:15:26 CET 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:04 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.0/classmate-1.7.0.pom is up-to-date (lastModified: Wed Jan 03 02:13:09 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.pom is up-to-date (lastModified: Thu Mar 31 12:37:39 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.pom is up-to-date (lastModified: Sat Oct 16 20:56:33 CEST 2021).
+Cached resource https://repo.maven.apache.org/maven2/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.module is up-to-date (lastModified: Thu Jan 26 16:39:41 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-runtime-parent/4.0.5/jaxb-runtime-parent-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:30 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.6/project-1.0.6.pom is up-to-date (lastModified: Mon Jan 13 16:50:47 CET 2020).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/56/oss-parent-56.pom is up-to-date (lastModified: Tue Nov 07 03:35:13 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.pom is up-to-date (lastModified: Sun May 21 19:28:37 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.pom is up-to-date (lastModified: Thu Jul 06 02:34:37 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.pom is up-to-date (lastModified: Mon Feb 19 10:42:14 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/4.0.5/jaxb-parent-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:30 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.pom is up-to-date (lastModified: Fri Aug 16 01:03:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/smallrye/jandex/3.1.2/jandex-3.1.2.pom is up-to-date (lastModified: Thu Jun 08 17:10:03 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/jboss/logging/logging-parent/1.0.1.Final/logging-parent-1.0.1.Final.pom is up-to-date (lastModified: Mon Jun 05 19:02:44 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/antlr/antlr4-master/4.13.0/antlr4-master-4.13.0.pom is up-to-date (lastModified: Sun May 21 19:28:22 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/xml/bind/jakarta.xml.bind-api-parent/4.0.2/jakarta.xml.bind-api-parent-4.0.2.pom is up-to-date (lastModified: Mon Feb 19 10:42:15 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/4.0.5/jaxb-bom-ext-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:28 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.14.19/byte-buddy-parent-1.14.19.pom is up-to-date (lastModified: Fri Aug 16 01:03:59 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/smallrye/jandex-parent/3.1.2/jandex-parent-3.1.2.pom is up-to-date (lastModified: Thu Jun 08 17:10:03 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom is up-to-date (lastModified: Mon Jan 27 20:15:21 CET 2014).
+Cached resource https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/39/jboss-parent-39.pom is up-to-date (lastModified: Thu Nov 04 23:30:59 CET 2021).
+Cached resource https://repo.maven.apache.org/maven2/io/smallrye/smallrye-build-parent/39/smallrye-build-parent-39.pom is up-to-date (lastModified: Wed Feb 15 11:59:17 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.3/junit-bom-5.9.3.pom is up-to-date (lastModified: Wed Apr 26 08:27:55 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.3/junit-bom-5.9.3.module is up-to-date (lastModified: Wed Apr 26 08:27:56 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-commons/3.3.5/spring-data-commons-3.3.5.pom is up-to-date (lastModified: Fri Oct 18 11:59:02 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-orm/6.1.14/spring-orm-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:53 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.pom is up-to-date (lastModified: Sat Aug 10 11:15:08 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:49 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-orm/6.1.14/spring-orm-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:53 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/2.0.16/slf4j-parent-2.0.16.pom is up-to-date (lastModified: Sat Aug 10 11:14:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:50 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/slf4j/slf4j-bom/2.0.16/slf4j-bom-2.0.16.pom is up-to-date (lastModified: Sat Aug 10 11:14:54 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11.pom is up-to-date (lastModified: Tue Oct 15 12:21:51 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.pom is up-to-date (lastModified: Wed Mar 06 13:32:50 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.pom is up-to-date (lastModified: Sat Aug 10 11:16:57 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j/2.23.1/log4j-2.23.1.pom is up-to-date (lastModified: Wed Mar 06 13:32:44 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/ch/qos/logback/logback-parent/1.5.11/logback-parent-1.5.11.pom is up-to-date (lastModified: Tue Oct 15 12:21:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy-bom/3.0.21/groovy-bom-3.0.21.pom is up-to-date (lastModified: Fri Mar 01 14:19:40 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom is up-to-date (lastModified: Sun Dec 24 04:55:54 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.16/jackson-parent-2.16.pom is up-to-date (lastModified: Wed Nov 15 20:21:30 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom is up-to-date (lastModified: Wed Apr 28 00:16:38 CEST 2021).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/platform/jakartaee-api-parent/9.1.0/jakartaee-api-parent-9.1.0.pom is up-to-date (lastModified: Wed Apr 28 00:16:51 CEST 2021).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom is up-to-date (lastModified: Thu Feb 08 20:49:38 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom is up-to-date (lastModified: Fri Sep 30 12:29:54 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom is up-to-date (lastModified: Wed Dec 28 14:06:31 CET 2022).
+Cached resource https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom is up-to-date (lastModified: Tue Feb 13 08:40:50 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom is up-to-date (lastModified: Thu Feb 15 14:57:30 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.module is up-to-date (lastModified: Thu Feb 15 14:57:30 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:57 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:57 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 19:03:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 18:50:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.module is up-to-date (lastModified: Fri Jul 05 18:50:57 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.module is up-to-date (lastModified: Fri Jul 05 19:03:39 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6.pom is up-to-date (lastModified: Mon Oct 14 23:50:41 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.pom is up-to-date (lastModified: Thu Feb 15 09:14:27 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:09 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11.pom is up-to-date (lastModified: Tue Oct 15 12:21:23 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.pom is up-to-date (lastModified: Wed Mar 06 13:32:45 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.pom is up-to-date (lastModified: Thu Feb 15 10:33:57 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.pom is up-to-date (lastModified: Tue Apr 11 17:07:17 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:03 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons/4.1.2/istack-commons-4.1.2.pom is up-to-date (lastModified: Tue Apr 11 17:07:10 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-activation-project/2.0.2/angus-activation-project-2.0.2.pom is up-to-date (lastModified: Thu Feb 15 10:33:58 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-txw-parent/4.0.5/jaxb-txw-parent-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:28 CET 2024).
+Excluding []
+Excluding []
+Excluding []
+Starting process 'command '/usr/libexec/java_home''. Working directory: /Users/mgomes2/.gradle/daemon/8.10.2 Command: /usr/libexec/java_home -V
+Successfully started process 'command '/usr/libexec/java_home''
+Excluding []
+Excluding []
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-test/3.3.5/spring-boot-starter-test-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:18:03 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.10.5/junit-platform-launcher-1.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-test/3.3.5/spring-boot-starter-test-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:18:03 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.10.5/junit-platform-launcher-1.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:48 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.10.5/junit-platform-engine-1.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:29 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.10.5/junit-platform-engine-1.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:29 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.pom is up-to-date (lastModified: Sun Feb 04 22:54:53 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-test/3.3.5/spring-boot-test-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:17:44 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.pom is up-to-date (lastModified: Tue Jan 10 16:20:03 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-test/3.3.5/spring-boot-test-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:17:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.pom is up-to-date (lastModified: Fri Jun 28 15:03:19 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/xmlunit/xmlunit-parent/2.9.1/xmlunit-parent-2.9.1.pom is up-to-date (lastModified: Tue Jan 10 16:19:46 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-test/6.1.14/spring-test-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:50 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.pom is up-to-date (lastModified: Fri Mar 01 10:01:26 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest/2.2/hamcrest-2.2.pom is up-to-date (lastModified: Wed Oct 16 22:53:28 CEST 2019).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-test-autoconfigure/3.3.5/spring-boot-test-autoconfigure-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:17:39 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.pom is up-to-date (lastModified: Wed Aug 07 10:30:21 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.pom is up-to-date (lastModified: Sat Jan 20 11:04:54 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/5.10.5/junit-jupiter-5.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.pom is up-to-date (lastModified: Fri Mar 01 10:01:30 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/net/minidev/json-smart/2.5.1/json-smart-2.5.1.pom is up-to-date (lastModified: Thu Mar 21 06:10:29 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-test/6.1.14/spring-test-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:51 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/awaitility/awaitility-parent/4.2.2/awaitility-parent-4.2.2.pom is up-to-date (lastModified: Wed Aug 07 10:29:01 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-test-autoconfigure/3.3.5/spring-boot-test-autoconfigure-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:17:40 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.module is up-to-date (lastModified: Sat Jan 20 11:04:55 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/5.10.5/junit-jupiter-5.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.pom is up-to-date (lastModified: Thu Jul 06 14:25:33 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.module is up-to-date (lastModified: Thu Jul 06 14:25:37 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.10.5/junit-platform-commons-1.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:19 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.10.5/junit-platform-commons-1.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:24 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.pom is up-to-date (lastModified: Thu Mar 21 06:09:33 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.10.5/junit-jupiter-api-5.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.10.5/junit-jupiter-engine-5.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:35:05 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.10.5/junit-jupiter-params-5.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:56 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.10.5/junit-jupiter-api-5.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.10.5/junit-jupiter-params-5.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:56 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.10.5/junit-jupiter-engine-5.10.5.module is up-to-date (lastModified: Fri Oct 04 14:35:10 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.pom is up-to-date (lastModified: Fri Aug 16 01:04:00 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/objenesis/objenesis/3.3/objenesis-3.3.pom is up-to-date (lastModified: Mon Aug 01 00:30:11 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/objenesis/objenesis-parent/3.3/objenesis-parent-3.3.pom is up-to-date (lastModified: Mon Aug 01 00:30:31 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.pom is up-to-date (lastModified: Fri Feb 28 13:44:59 CET 2014).
+Cached resource https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.6/asm-9.6.pom is up-to-date (lastModified: Sat Sep 30 13:18:34 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5.1/ow2-1.5.1.pom is up-to-date (lastModified: Fri Apr 09 12:28:51 CEST 2021).
+Excluding []
+Excluding []
+Excluding []
+Tasks to be executed: [task ':clean', task ':compileJava', task ':processResources', task ':classes', task ':resolveMainClassName', task ':bootJar', task ':jar', task ':assemble', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test', task ':check', task ':build']
+Tasks that were excluded: []
+Resolve mutations for :clean (Thread[Execution worker,5,main]) started.
+:clean (Thread[Execution worker,5,main]) started.
+destroyer locations for task group 0 (Thread[Execution worker Thread 2,5,main]) started.
+
+> Task :clean
+Caching disabled for task ':clean' because:
+  Build cache is disabled
+Task ':clean' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :compileJava (Thread[Execution worker,5,main]) started.
+:compileJava (Thread[Execution worker,5,main]) started.
+
+> Task :compileJava FAILED
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:18:00 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:19:44 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.3.5/spring-boot-starter-jdbc-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:18:41 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:18:33 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:10:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-jpa/3.3.5/spring-boot-starter-data-jpa-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:19:10 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.5.3.Final/hibernate-core-6.5.3.Final.jar is up-to-date (lastModified: Wed Sep 18 18:35:17 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:17:53 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-jpa/3.3.5/spring-data-jpa-3.3.5.jar is up-to-date (lastModified: Fri Oct 18 12:03:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.1.14/spring-web-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:49 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:18:29 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:20:28 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-aop/3.3.5/spring-boot-starter-aop-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:19:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar is up-to-date (lastModified: Tue Jun 14 13:30:18 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:20:19 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:10:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-orm/6.1.14/spring-orm-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:53 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:56 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:50 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-commons/3.3.5/spring-data-commons-3.3.5.jar is up-to-date (lastModified: Fri Oct 18 11:59:01 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:59 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.1.14/spring-context-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:10:04 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:10:05 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:10:01 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar is up-to-date (lastModified: Fri Jul 05 19:45:41 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar is up-to-date (lastModified: Sun Aug 27 10:26:35 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar is up-to-date (lastModified: Fri Jul 05 19:45:33 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar is up-to-date (lastModified: Fri Jul 05 18:50:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar is up-to-date (lastModified: Fri Jul 05 19:03:44 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar is up-to-date (lastModified: Fri Jul 05 19:45:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31.jar is up-to-date (lastModified: Thu Oct 03 21:18:31 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar is up-to-date (lastModified: Thu Oct 03 21:17:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar is up-to-date (lastModified: Fri Jul 05 19:15:54 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31.jar is up-to-date (lastModified: Thu Oct 03 21:18:22 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar is up-to-date (lastModified: Sat May 11 08:29:49 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6.jar is up-to-date (lastModified: Mon Oct 14 23:50:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar is up-to-date (lastModified: Sat Nov 04 13:47:33 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11.jar is up-to-date (lastModified: Tue Oct 15 12:21:50 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar is up-to-date (lastModified: Thu Mar 31 12:37:39 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar is up-to-date (lastModified: Sun May 21 19:28:40 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar is up-to-date (lastModified: Wed Mar 06 13:32:50 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:57 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar is up-to-date (lastModified: Sat Aug 10 11:16:56 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar is up-to-date (lastModified: Sat Aug 10 11:15:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6.jar is up-to-date (lastModified: Mon Oct 14 23:50:41 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar is up-to-date (lastModified: Fri Feb 25 12:15:26 CET 2022).
+Cached resource https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11.jar is up-to-date (lastModified: Tue Oct 15 12:21:21 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar is up-to-date (lastModified: Wed Mar 06 13:32:45 CET 2024).
+Custom actions are attached to task ':compileJava'.
+Caching disabled for task ':compileJava' because:
+  Build cache is disabled
+Task ':compileJava' is not up-to-date because:
+  Task has failed previously.
+The input changes require a full rebuild for incremental task ':compileJava'.
+Compilation mode: in-process compilation
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain '/opt/homebrew/Cellar/openjdk@17/17.0.13/libexec/openjdk.jdk/Contents/Home'.
+Compiling with JDK Java compiler API.
+/Users/mgomes2/git/bitbucket/aim/aim1/src/main/java/com/atlassian/aim1/Message.java:3: error: package javax.persistence does not exist
+import javax.persistence.Entity;
+                        ^
+/Users/mgomes2/git/bitbucket/aim/aim1/src/main/java/com/atlassian/aim1/Message.java:4: error: package javax.persistence does not exist
+import javax.persistence.Id;
+                        ^
+/Users/mgomes2/git/bitbucket/aim/aim1/src/main/java/com/atlassian/aim1/Message.java:7: error: cannot find symbol
+@Entity
+ ^
+  symbol: class Entity
+/Users/mgomes2/git/bitbucket/aim/aim1/src/main/java/com/atlassian/aim1/MessageController.java:18: error: cannot find symbol
+    public Message createMessage(@RequestBody MessageRequest request) {
+                                              ^
+  symbol:   class MessageRequest
+  location: class MessageController
+/Users/mgomes2/git/bitbucket/aim/aim1/src/main/java/com/atlassian/aim1/Message.java:10: error: cannot find symbol
+    @Id
+     ^
+  symbol:   class Id
+  location: class Message
+5 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 7s
+2 actionable tasks: 2 executed
+Watched directory hierarchies: [/Users/mgomes2/git/bitbucket/aim/aim1]
+Initialized native services in: /Users/mgomes2/.gradle/native
+Initialized jansi services in: /Users/mgomes2/.gradle/native
+Received JVM installation metadata from '/opt/homebrew/Cellar/openjdk@17/17.0.13/libexec/openjdk.jdk/Contents/Home': {JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.13/libexec/openjdk.jdk/Contents/Home, JAVA_VERSION=17.0.13, JAVA_VENDOR=Homebrew, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=17.0.13+0, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=17.0.13+0, VM_VENDOR=Homebrew, OS_ARCH=aarch64}
+The client will now receive all logging from the daemon (pid: 66678). The daemon log file: /Users/mgomes2/.gradle/daemon/8.10.2/daemon-66678.out.log
+Starting 2nd build in daemon [uptime: 4 mins 10.58 secs, performance: 100%, GC rate: 0.00/s, heap usage: 6% of 512 MiB, non-heap usage: 19% of 384 MiB]
+Using 12 worker leases.
+Now considering [/Users/mgomes2/git/bitbucket/aim/aim1] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/Users/mgomes2/git/bitbucket/aim/aim1/settings.gradle'.
+Projects loaded. Root project using build file '/Users/mgomes2/git/bitbucket/aim/aim1/build.gradle'.
+Included projects: [root project 'aim1']
+
+> Configure project :
+Evaluating root project 'aim1' using build file '/Users/mgomes2/git/bitbucket/aim/aim1/build.gradle'.
+Found locally available resource with matching checksum: [https://plugins.gradle.org/m2/org/springframework/boot/org.springframework.boot.gradle.plugin/3.3.5/org.springframework.boot.gradle.plugin-3.3.5.pom, /Users/mgomes2/.gradle/caches/modules-2/files-2.1/org.springframework.boot/org.springframework.boot.gradle.plugin/3.3.5/8c60d45f12f52fc14579eee027818cb798fedee4/org.springframework.boot.gradle.plugin-3.3.5.pom]
+Resource missing. [HTTP HEAD: https://plugins.gradle.org/m2/org/springframework/boot/org.springframework.boot.gradle.plugin/3.3.5/org.springframework.boot.gradle.plugin-3.3.5.jar]
+Found locally available resource with matching checksum: [https://plugins.gradle.org/m2/io/spring/dependency-management/io.spring.dependency-management.gradle.plugin/1.1.6/io.spring.dependency-management.gradle.plugin-1.1.6.pom, /Users/mgomes2/.gradle/caches/modules-2/files-2.1/io.spring.dependency-management/io.spring.dependency-management.gradle.plugin/1.1.6/27851fd48b09523adc9d90db89790e67d6c4dd62/io.spring.dependency-management.gradle.plugin-1.1.6.pom]
+Resource missing. [HTTP HEAD: https://plugins.gradle.org/m2/io/spring/dependency-management/io.spring.dependency-management.gradle.plugin/1.1.6/io.spring.dependency-management.gradle.plugin-1.1.6.jar]
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-gradle-plugin/3.3.5/spring-boot-gradle-plugin-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:33:19 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-gradle-plugin/3.3.5/spring-boot-gradle-plugin-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:33:19 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/io/spring/gradle/dependency-management-plugin/1.1.6/dependency-management-plugin-1.1.6.pom is up-to-date (lastModified: Mon Jul 08 13:06:38 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/io/spring/gradle/dependency-management-plugin/1.1.6/dependency-management-plugin-1.1.6.module is up-to-date (lastModified: Mon Jul 08 13:06:38 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/apache/commons/commons-compress/1.25.0/commons-compress-1.25.0.pom is up-to-date (lastModified: Sun Nov 12 23:15:59 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-buildpack-platform/3.3.5/spring-boot-buildpack-platform-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:20:14 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:10:00 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-loader-tools/3.3.5/spring-boot-loader-tools-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:19:49 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/apache/commons/commons-parent/64/commons-parent-64.pom is up-to-date (lastModified: Fri Oct 06 16:59:25 CEST 2023).
+Cached resource https://plugins.gradle.org/m2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:10:01 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/apache/apache/30/apache-30.pom is up-to-date (lastModified: Sun Jun 11 18:49:47 CEST 2023).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-loader-tools/3.3.5/spring-boot-loader-tools-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:19:50 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-buildpack-platform/3.3.5/spring-boot-buildpack-platform-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:20:14 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/junit/junit-bom/5.10.0/junit-bom-5.10.0.pom is up-to-date (lastModified: Sun Jul 23 14:52:34 CEST 2023).
+Cached resource https://plugins.gradle.org/m2/org/junit/junit-bom/5.10.0/junit-bom-5.10.0.module is up-to-date (lastModified: Sun Jul 23 14:52:34 CEST 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/client5/httpclient5/5.3.1/httpclient5-5.3.1.pom is up-to-date (lastModified: Sun Jan 21 10:52:48 CET 2024).
+Cached resource https://plugins.gradle.org/m2/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.pom is up-to-date (lastModified: Sat Jan 14 13:21:51 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.14.2/jackson-module-parameter-names-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 03:02:21 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 02:31:52 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.pom is up-to-date (lastModified: Sun May 12 08:05:11 CEST 2019).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/client5/httpclient5-parent/5.3.1/httpclient5-parent-5.3.1.pom is up-to-date (lastModified: Sun Jan 21 10:52:24 CET 2024).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-modules-java8/2.14.2/jackson-modules-java8-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 03:02:20 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/jackson-base/2.14.2/jackson-base-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 00:44:58 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/httpcomponents-parent/13/httpcomponents-parent-13.pom is up-to-date (lastModified: Sat Oct 29 13:56:15 CEST 2022).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/jackson-bom/2.14.2/jackson-bom-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 00:44:46 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/apache/27/apache-27.pom is up-to-date (lastModified: Sun Jul 10 11:20:11 CEST 2022).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/jackson-parent/2.14/jackson-parent-2.14.pom is up-to-date (lastModified: Sat Nov 05 21:10:10 CET 2022).
+Cached resource https://plugins.gradle.org/m2/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.pom is up-to-date (lastModified: Sun Nov 05 17:49:36 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/oss-parent/48/oss-parent-48.pom is up-to-date (lastModified: Tue Sep 27 04:21:40 CEST 2022).
+Cached resource https://plugins.gradle.org/m2/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.module is up-to-date (lastModified: Sun Nov 05 17:49:37 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.module is up-to-date (lastModified: Sun Jan 29 02:31:46 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.14.2/jackson-module-parameter-names-2.14.2.module is up-to-date (lastModified: Sun Jan 29 03:02:15 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:57 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:57 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 00:51:29 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.pom is up-to-date (lastModified: Sun Jan 29 01:54:47 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2.module is up-to-date (lastModified: Sun Jan 29 00:51:30 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.module is up-to-date (lastModified: Sun Jan 29 01:54:47 CET 2023).
+Cached resource https://plugins.gradle.org/m2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.pom is up-to-date (lastModified: Sat Jan 14 13:21:41 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/core5/httpcore5/5.2.4/httpcore5-5.2.4.pom is up-to-date (lastModified: Fri Nov 24 20:02:22 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/core5/httpcore5-h2/5.2.4/httpcore5-h2-5.2.4.pom is up-to-date (lastModified: Fri Nov 24 20:02:43 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom is up-to-date (lastModified: Tue Feb 08 14:33:51 CET 2022).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/core5/httpcore5-parent/5.2.4/httpcore5-parent-5.2.4.pom is up-to-date (lastModified: Fri Nov 24 20:01:47 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom is up-to-date (lastModified: Tue Feb 08 14:33:41 CET 2022).
+Cached resource https://plugins.gradle.org/m2/org/junit/junit-bom/5.9.3/junit-bom-5.9.3.pom is up-to-date (lastModified: Wed Apr 26 08:27:55 CEST 2023).
+Cached resource https://plugins.gradle.org/m2/org/junit/junit-bom/5.9.3/junit-bom-5.9.3.module is up-to-date (lastModified: Wed Apr 26 08:27:56 CEST 2023).
+Cached resource https://plugins.gradle.org/m2/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.pom is up-to-date (lastModified: Tue Dec 18 19:37:00 CET 2018).
+Cached resource https://plugins.gradle.org/m2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom is up-to-date (lastModified: Fri Mar 31 06:55:48 CEST 2017).
+Cached resource https://plugins.gradle.org/m2/org/antlr/antlr4-master/4.7.2/antlr4-master-4.7.2.pom is up-to-date (lastModified: Tue Dec 18 19:36:49 CET 2018).
+Cached resource https://plugins.gradle.org/m2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom is up-to-date (lastModified: Mon Mar 07 13:42:48 CET 2011).
+Cached resource https://plugins.gradle.org/m2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom is up-to-date (lastModified: Mon Jan 27 20:15:21 CET 2014).
+Cached resource https://plugins.gradle.org/m2/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.jar is up-to-date (lastModified: Sun May 12 08:05:10 CEST 2019).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-annotations/2.14.2/jackson-annotations-2.14.2.jar is up-to-date (lastModified: Sun Jan 29 00:51:28 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.jar is up-to-date (lastModified: Sun Jan 29 02:31:51 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.jar is up-to-date (lastModified: Sun Jan 29 01:54:46 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-loader-tools/3.3.5/spring-boot-loader-tools-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:19:50 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.jar is up-to-date (lastModified: Sat Jan 14 13:21:48 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.14.2/jackson-module-parameter-names-2.14.2.jar is up-to-date (lastModified: Sun Jan 29 03:02:20 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/apache/commons/commons-compress/1.25.0/commons-compress-1.25.0.jar is up-to-date (lastModified: Sun Nov 12 23:16:00 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:57 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-gradle-plugin/3.3.5/spring-boot-gradle-plugin-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:33:19 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/client5/httpclient5/5.3.1/httpclient5-5.3.1.jar is up-to-date (lastModified: Sun Jan 21 10:52:47 CET 2024).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/core5/httpcore5-h2/5.2.4/httpcore5-h2-5.2.4.jar is up-to-date (lastModified: Fri Nov 24 20:02:41 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-buildpack-platform/3.3.5/spring-boot-buildpack-platform-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:20:14 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/org/apache/httpcomponents/core5/httpcore5/5.2.4/httpcore5-5.2.4.jar is up-to-date (lastModified: Fri Nov 24 20:02:20 CET 2023).
+Cached resource https://plugins.gradle.org/m2/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.jar is up-to-date (lastModified: Tue Dec 18 19:36:59 CET 2018).
+Cached resource https://plugins.gradle.org/m2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar is up-to-date (lastModified: Sat Jan 14 13:21:39 CET 2023).
+Cached resource https://plugins.gradle.org/m2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar is up-to-date (lastModified: Fri Mar 31 06:55:47 CEST 2017).
+Cached resource https://plugins.gradle.org/m2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar is up-to-date (lastModified: Tue Feb 08 14:33:50 CET 2022).
+Cached resource https://plugins.gradle.org/m2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:10:01 CEST 2024).
+Cached resource https://plugins.gradle.org/m2/io/spring/gradle/dependency-management-plugin/1.1.6/dependency-management-plugin-1.1.6.jar is up-to-date (lastModified: Mon Jul 08 13:06:37 CEST 2024).
+Transforming spring-boot-gradle-plugin-3.3.5.jar (org.springframework.boot:spring-boot-gradle-plugin:3.3.5) with InstrumentationAnalysisTransform
+Transforming dependency-management-plugin-1.1.6.jar (io.spring.gradle:dependency-management-plugin:1.1.6) with InstrumentationAnalysisTransform
+Transforming spring-boot-buildpack-platform-3.3.5.jar (org.springframework.boot:spring-boot-buildpack-platform:3.3.5) with InstrumentationAnalysisTransform
+Transforming spring-boot-loader-tools-3.3.5.jar (org.springframework.boot:spring-boot-loader-tools:3.3.5) with InstrumentationAnalysisTransform
+Transforming commons-compress-1.25.0.jar (org.apache.commons:commons-compress:1.25.0) with InstrumentationAnalysisTransform
+Transforming spring-core-6.1.14.jar (org.springframework:spring-core:6.1.14) with InstrumentationAnalysisTransform
+Transforming jackson-annotations-2.14.2.jar (com.fasterxml.jackson.core:jackson-annotations:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-core-2.14.2.jar (com.fasterxml.jackson.core:jackson-core:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-module-parameter-names-2.14.2.jar (com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-databind-2.14.2.jar (com.fasterxml.jackson.core:jackson-databind:2.14.2) with InstrumentationAnalysisTransform
+Transforming jna-platform-5.13.0.jar (net.java.dev.jna:jna-platform:5.13.0) with InstrumentationAnalysisTransform
+Transforming httpclient5-5.3.1.jar (org.apache.httpcomponents.client5:httpclient5:5.3.1) with InstrumentationAnalysisTransform
+Transforming tomlj-1.0.0.jar (org.tomlj:tomlj:1.0.0) with InstrumentationAnalysisTransform
+Transforming spring-jcl-6.1.14.jar (org.springframework:spring-jcl:6.1.14) with InstrumentationAnalysisTransform
+Transforming jna-5.13.0.jar (net.java.dev.jna:jna:5.13.0) with InstrumentationAnalysisTransform
+Transforming httpcore5-h2-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5-h2:5.2.4) with InstrumentationAnalysisTransform
+Transforming httpcore5-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5:5.2.4) with InstrumentationAnalysisTransform
+Transforming slf4j-api-1.7.36.jar (org.slf4j:slf4j-api:1.7.36) with InstrumentationAnalysisTransform
+Transforming antlr4-runtime-4.7.2.jar (org.antlr:antlr4-runtime:4.7.2) with InstrumentationAnalysisTransform
+Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with InstrumentationAnalysisTransform
+Transforming spring-boot-gradle-plugin-3.3.5.jar (org.springframework.boot:spring-boot-gradle-plugin:3.3.5) with InstrumentationAnalysisTransform
+Transforming spring-boot-gradle-plugin-3.3.5.jar (org.springframework.boot:spring-boot-gradle-plugin:3.3.5) with MergeInstrumentationAnalysisTransform
+Transforming dependency-management-plugin-1.1.6.jar (io.spring.gradle:dependency-management-plugin:1.1.6) with InstrumentationAnalysisTransform
+Transforming dependency-management-plugin-1.1.6.jar (io.spring.gradle:dependency-management-plugin:1.1.6) with MergeInstrumentationAnalysisTransform
+Transforming spring-boot-buildpack-platform-3.3.5.jar (org.springframework.boot:spring-boot-buildpack-platform:3.3.5) with InstrumentationAnalysisTransform
+Transforming spring-boot-buildpack-platform-3.3.5.jar (org.springframework.boot:spring-boot-buildpack-platform:3.3.5) with MergeInstrumentationAnalysisTransform
+Transforming spring-boot-gradle-plugin-3.3.5.jar (org.springframework.boot:spring-boot-gradle-plugin:3.3.5) with ExternalDependencyInstrumentingArtifactTransform
+Transforming spring-boot-loader-tools-3.3.5.jar (org.springframework.boot:spring-boot-loader-tools:3.3.5) with InstrumentationAnalysisTransform
+Transforming spring-boot-loader-tools-3.3.5.jar (org.springframework.boot:spring-boot-loader-tools:3.3.5) with MergeInstrumentationAnalysisTransform
+Transforming dependency-management-plugin-1.1.6.jar (io.spring.gradle:dependency-management-plugin:1.1.6) with ExternalDependencyInstrumentingArtifactTransform
+Transforming commons-compress-1.25.0.jar (org.apache.commons:commons-compress:1.25.0) with InstrumentationAnalysisTransform
+Transforming commons-compress-1.25.0.jar (org.apache.commons:commons-compress:1.25.0) with MergeInstrumentationAnalysisTransform
+Transforming spring-boot-buildpack-platform-3.3.5.jar (org.springframework.boot:spring-boot-buildpack-platform:3.3.5) with ExternalDependencyInstrumentingArtifactTransform
+Transforming spring-core-6.1.14.jar (org.springframework:spring-core:6.1.14) with InstrumentationAnalysisTransform
+Transforming spring-boot-loader-tools-3.3.5.jar (org.springframework.boot:spring-boot-loader-tools:3.3.5) with ExternalDependencyInstrumentingArtifactTransform
+Transforming spring-core-6.1.14.jar (org.springframework:spring-core:6.1.14) with MergeInstrumentationAnalysisTransform
+Transforming jackson-annotations-2.14.2.jar (com.fasterxml.jackson.core:jackson-annotations:2.14.2) with InstrumentationAnalysisTransform
+Transforming commons-compress-1.25.0.jar (org.apache.commons:commons-compress:1.25.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jackson-annotations-2.14.2.jar (com.fasterxml.jackson.core:jackson-annotations:2.14.2) with MergeInstrumentationAnalysisTransform
+Transforming spring-core-6.1.14.jar (org.springframework:spring-core:6.1.14) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jackson-core-2.14.2.jar (com.fasterxml.jackson.core:jackson-core:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-core-2.14.2.jar (com.fasterxml.jackson.core:jackson-core:2.14.2) with MergeInstrumentationAnalysisTransform
+Transforming jackson-module-parameter-names-2.14.2.jar (com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-annotations-2.14.2.jar (com.fasterxml.jackson.core:jackson-annotations:2.14.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jackson-module-parameter-names-2.14.2.jar (com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.2) with MergeInstrumentationAnalysisTransform
+Transforming jackson-core-2.14.2.jar (com.fasterxml.jackson.core:jackson-core:2.14.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jackson-databind-2.14.2.jar (com.fasterxml.jackson.core:jackson-databind:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-databind-2.14.2.jar (com.fasterxml.jackson.core:jackson-databind:2.14.2) with MergeInstrumentationAnalysisTransform
+Transforming jackson-module-parameter-names-2.14.2.jar (com.fasterxml.jackson.module:jackson-module-parameter-names:2.14.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jna-platform-5.13.0.jar (net.java.dev.jna:jna-platform:5.13.0) with InstrumentationAnalysisTransform
+Transforming jna-platform-5.13.0.jar (net.java.dev.jna:jna-platform:5.13.0) with MergeInstrumentationAnalysisTransform
+Transforming jackson-databind-2.14.2.jar (com.fasterxml.jackson.core:jackson-databind:2.14.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming httpclient5-5.3.1.jar (org.apache.httpcomponents.client5:httpclient5:5.3.1) with InstrumentationAnalysisTransform
+Transforming httpclient5-5.3.1.jar (org.apache.httpcomponents.client5:httpclient5:5.3.1) with MergeInstrumentationAnalysisTransform
+Transforming tomlj-1.0.0.jar (org.tomlj:tomlj:1.0.0) with InstrumentationAnalysisTransform
+Transforming jna-platform-5.13.0.jar (net.java.dev.jna:jna-platform:5.13.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming tomlj-1.0.0.jar (org.tomlj:tomlj:1.0.0) with MergeInstrumentationAnalysisTransform
+Transforming spring-jcl-6.1.14.jar (org.springframework:spring-jcl:6.1.14) with InstrumentationAnalysisTransform
+Transforming spring-jcl-6.1.14.jar (org.springframework:spring-jcl:6.1.14) with MergeInstrumentationAnalysisTransform
+Transforming httpclient5-5.3.1.jar (org.apache.httpcomponents.client5:httpclient5:5.3.1) with ExternalDependencyInstrumentingArtifactTransform
+Transforming tomlj-1.0.0.jar (org.tomlj:tomlj:1.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jna-5.13.0.jar (net.java.dev.jna:jna:5.13.0) with InstrumentationAnalysisTransform
+Transforming jna-5.13.0.jar (net.java.dev.jna:jna:5.13.0) with MergeInstrumentationAnalysisTransform
+Transforming httpcore5-h2-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5-h2:5.2.4) with InstrumentationAnalysisTransform
+Transforming spring-jcl-6.1.14.jar (org.springframework:spring-jcl:6.1.14) with ExternalDependencyInstrumentingArtifactTransform
+Transforming httpcore5-h2-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5-h2:5.2.4) with MergeInstrumentationAnalysisTransform
+Transforming httpcore5-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5:5.2.4) with InstrumentationAnalysisTransform
+Transforming jna-5.13.0.jar (net.java.dev.jna:jna:5.13.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming httpcore5-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5:5.2.4) with MergeInstrumentationAnalysisTransform
+Transforming slf4j-api-1.7.36.jar (org.slf4j:slf4j-api:1.7.36) with InstrumentationAnalysisTransform
+Transforming slf4j-api-1.7.36.jar (org.slf4j:slf4j-api:1.7.36) with MergeInstrumentationAnalysisTransform
+Transforming httpcore5-h2-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5-h2:5.2.4) with ExternalDependencyInstrumentingArtifactTransform
+Transforming antlr4-runtime-4.7.2.jar (org.antlr:antlr4-runtime:4.7.2) with InstrumentationAnalysisTransform
+Transforming httpcore5-5.2.4.jar (org.apache.httpcomponents.core5:httpcore5:5.2.4) with ExternalDependencyInstrumentingArtifactTransform
+Transforming antlr4-runtime-4.7.2.jar (org.antlr:antlr4-runtime:4.7.2) with MergeInstrumentationAnalysisTransform
+Transforming slf4j-api-1.7.36.jar (org.slf4j:slf4j-api:1.7.36) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with InstrumentationAnalysisTransform
+Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with MergeInstrumentationAnalysisTransform
+Transforming antlr4-runtime-4.7.2.jar (org.antlr:antlr4-runtime:4.7.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with ExternalDependencyInstrumentingArtifactTransform
+Applying dependency management to configuration 'annotationProcessor' in project 'aim1'
+Applying dependency management to configuration 'apiElements' in project 'aim1'
+Applying dependency management to configuration 'archives' in project 'aim1'
+Applying dependency management to configuration 'bootArchives' in project 'aim1'
+Applying dependency management to configuration 'compileClasspath' in project 'aim1'
+Applying dependency management to configuration 'compileOnly' in project 'aim1'
+Applying dependency management to configuration 'default' in project 'aim1'
+Applying dependency management to configuration 'developmentOnly' in project 'aim1'
+Applying dependency management to configuration 'implementation' in project 'aim1'
+Applying dependency management to configuration 'mainSourceElements' in project 'aim1'
+Applying dependency management to configuration 'productionRuntimeClasspath' in project 'aim1'
+Applying dependency management to configuration 'runtimeClasspath' in project 'aim1'
+Applying dependency management to configuration 'runtimeElements' in project 'aim1'
+Applying dependency management to configuration 'runtimeOnly' in project 'aim1'
+Applying dependency management to configuration 'testAndDevelopmentOnly' in project 'aim1'
+Applying dependency management to configuration 'testAnnotationProcessor' in project 'aim1'
+Applying dependency management to configuration 'testCompileClasspath' in project 'aim1'
+Applying dependency management to configuration 'testCompileOnly' in project 'aim1'
+Applying dependency management to configuration 'testImplementation' in project 'aim1'
+Applying dependency management to configuration 'testResultsElementsForTest' in project 'aim1'
+Applying dependency management to configuration 'testRuntimeClasspath' in project 'aim1'
+Applying dependency management to configuration 'testRuntimeOnly' in project 'aim1'
+All projects evaluated.
+Task name matched 'clean'
+Task name matched 'build'
+Selected primary task 'clean' from project :
+Selected primary task 'build' from project :
+Resolving global dependency management for project 'aim1'
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/3.3.5/spring-boot-dependencies-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:20:04 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/activemq/activemq-bom/6.1.3/activemq-bom-6.1.3.pom is up-to-date (lastModified: Fri Aug 02 06:49:16 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/activemq/artemis-bom/2.33.0/artemis-bom-2.33.0.pom is up-to-date (lastModified: Tue Mar 19 22:05:17 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/activemq/artemis-project/2.33.0/artemis-project-2.33.0.pom is up-to-date (lastModified: Tue Mar 19 22:05:15 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/apache/31/apache-31.pom is up-to-date (lastModified: Wed Nov 08 23:14:57 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/assertj/assertj-bom/3.25.3/assertj-bom-3.25.3.pom is up-to-date (lastModified: Sun Feb 04 22:54:53 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/3.4.2/zipkin-reporter-bom-3.4.2.pom is up-to-date (lastModified: Thu Sep 19 05:12:12 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/6.0.3/brave-bom-6.0.3.pom is up-to-date (lastModified: Thu Apr 11 02:15:24 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/cassandra/java-driver-bom/4.18.1/java-driver-bom-4.18.1.pom is up-to-date (lastModified: Mon May 20 18:46:24 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/4.0.5/jaxb-bom-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:01 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.9/project-1.0.9.pom is up-to-date (lastModified: Wed Oct 25 18:33:56 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/groovy/groovy-bom/4.0.23/groovy-bom-4.0.23.pom is up-to-date (lastModified: Mon Sep 09 14:19:43 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/groovy/groovy-bom/4.0.23/groovy-bom-4.0.23.module is up-to-date (lastModified: Mon Sep 09 14:19:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/infinispan/infinispan-bom/15.0.10.Final/infinispan-bom-15.0.10.Final.pom is up-to-date (lastModified: Fri Oct 04 17:06:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/infinispan/infinispan-build-configuration-parent/15.0.10.Final/infinispan-build-configuration-parent-15.0.10.Final.pom is up-to-date (lastModified: Fri Oct 04 17:07:00 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/43/jboss-parent-43.pom is up-to-date (lastModified: Mon Jan 08 16:10:32 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.17.2/jackson-bom-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 18:48:48 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.17/jackson-parent-2.17.pom is up-to-date (lastModified: Tue Mar 12 04:34:41 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/58/oss-parent-58.pom is up-to-date (lastModified: Mon Feb 19 22:49:14 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/glassfish/jersey/jersey-bom/3.1.9/jersey-bom-3.1.9.pom is up-to-date (lastModified: Mon Oct 07 12:58:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/jetty/ee10/jetty-ee10-bom/12.0.14/jetty-ee10-bom-12.0.14.pom is up-to-date (lastModified: Mon Sep 30 16:37:08 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/12.0.14/jetty-bom-12.0.14.pom is up-to-date (lastModified: Mon Sep 30 16:36:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.5/junit-bom-5.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:18 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.5/junit-bom-5.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:21 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-bom/1.9.25/kotlin-bom-1.9.25.pom is up-to-date (lastModified: Fri Jul 19 10:59:25 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.8.1/kotlinx-coroutines-bom-1.8.1.pom is up-to-date (lastModified: Fri May 10 12:17:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-bom/1.6.3/kotlinx-serialization-bom-1.6.3.pom is up-to-date (lastModified: Fri Feb 16 16:07:05 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-bom/2.23.1/log4j-bom-2.23.1.pom is up-to-date (lastModified: Wed Mar 06 13:32:43 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/10.6.0/logging-parent-10.6.0.pom is up-to-date (lastModified: Thu Jan 11 11:15:57 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.13.6/micrometer-bom-1.13.6.pom is up-to-date (lastModified: Mon Oct 14 23:50:41 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bom/1.3.5/micrometer-tracing-bom-1.3.5.pom is up-to-date (lastModified: Tue Oct 15 00:50:21 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/5.11.0/mockito-bom-5.11.0.pom is up-to-date (lastModified: Fri Mar 01 10:01:25 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.114.Final/netty-bom-4.1.114.Final.pom is up-to-date (lastModified: Tue Oct 01 14:58:50 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom is up-to-date (lastModified: Mon Mar 07 13:42:48 CET 2011).
+Cached resource https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp-bom/4.12.0/okhttp-bom-4.12.0.pom is up-to-date (lastModified: Tue Oct 17 04:22:43 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp-bom/4.12.0/okhttp-bom-4.12.0.module is up-to-date (lastModified: Tue Oct 17 04:22:44 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-bom/1.37.0/opentelemetry-bom-1.37.0.pom is up-to-date (lastModified: Fri Apr 05 20:06:18 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-bom/1.37.0/opentelemetry-bom-1.37.0.module is up-to-date (lastModified: Fri Apr 05 20:06:18 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/prometheus/prometheus-metrics-bom/1.2.1/prometheus-metrics-bom-1.2.1.pom is up-to-date (lastModified: Thu Apr 04 22:48:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/prometheus/client_java/1.2.1/client_java-1.2.1.pom is up-to-date (lastModified: Thu Apr 04 22:48:44 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/prometheus/simpleclient_bom/0.16.0/simpleclient_bom-0.16.0.pom is up-to-date (lastModified: Wed Jun 15 23:22:02 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/io/prometheus/parent/0.16.0/parent-0.16.0.pom is up-to-date (lastModified: Wed Jun 15 23:17:40 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/pulsar/pulsar-bom/3.2.4/pulsar-bom-3.2.4.pom is up-to-date (lastModified: Mon Jul 29 18:03:05 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom is up-to-date (lastModified: Sun Dec 11 20:18:54 CET 2022).
+Cached resource https://repo.maven.apache.org/maven2/com/querydsl/querydsl-bom/5.1.0/querydsl-bom-5.1.0.pom is up-to-date (lastModified: Mon Jan 29 02:03:03 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2023.0.11/reactor-bom-2023.0.11.pom is up-to-date (lastModified: Tue Oct 15 12:32:04 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2023.0.11/reactor-bom-2023.0.11.module is up-to-date (lastModified: Tue Oct 15 12:32:05 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/rest-assured/rest-assured-bom/5.4.0/rest-assured-bom-5.4.0.pom is up-to-date (lastModified: Fri Dec 08 11:17:33 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/io/rsocket/rsocket-bom/1.1.3/rsocket-bom-1.1.3.pom is up-to-date (lastModified: Wed Sep 14 13:46:02 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-bom/4.19.1/selenium-bom-4.19.1.pom is up-to-date (lastModified: Fri Mar 29 08:19:15 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp-bom/3.1.7/spring-amqp-bom-3.1.7.pom is up-to-date (lastModified: Mon Aug 19 22:01:02 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp-bom/3.1.7/spring-amqp-bom-3.1.7.module is up-to-date (lastModified: Mon Aug 19 22:01:02 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/batch/spring-batch-bom/5.1.2/spring-batch-bom-5.1.2.pom is up-to-date (lastModified: Wed May 22 12:30:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-bom/2024.0.5/spring-data-bom-2024.0.5.pom is up-to-date (lastModified: Fri Oct 18 11:56:21 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.14/spring-framework-bom-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.14/spring-framework-bom-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/6.3.5/spring-integration-bom-6.3.5.pom is up-to-date (lastModified: Wed Oct 23 15:13:48 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/6.3.5/spring-integration-bom-6.3.5.module is up-to-date (lastModified: Wed Oct 23 15:13:48 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/pulsar/spring-pulsar-bom/1.1.5/spring-pulsar-bom-1.1.5.pom is up-to-date (lastModified: Tue Oct 22 05:58:43 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/pulsar/spring-pulsar-bom/1.1.5/spring-pulsar-bom-1.1.5.module is up-to-date (lastModified: Tue Oct 22 05:58:43 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/restdocs/spring-restdocs-bom/3.0.2/spring-restdocs-bom-3.0.2.pom is up-to-date (lastModified: Mon Oct 21 15:19:00 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/6.3.4/spring-security-bom-6.3.4.pom is up-to-date (lastModified: Mon Oct 21 19:26:52 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/6.3.4/spring-security-bom-6.3.4.module is up-to-date (lastModified: Mon Oct 21 19:26:52 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/3.3.3/spring-session-bom-3.3.3.pom is up-to-date (lastModified: Mon Oct 21 22:40:03 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/3.3.3/spring-session-bom-3.3.3.module is up-to-date (lastModified: Mon Oct 21 22:40:04 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/ws/spring-ws-bom/4.0.11/spring-ws-bom-4.0.11.pom is up-to-date (lastModified: Fri May 17 12:18:01 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers-bom/1.19.8/testcontainers-bom-1.19.8.pom is up-to-date (lastModified: Wed May 08 23:57:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:17:53 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.7.4/postgresql-42.7.4.pom is up-to-date (lastModified: Thu Aug 22 15:59:44 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-jpa/3.3.5/spring-boot-starter-data-jpa-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:19:09 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:17:53 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-jpa/3.3.5/spring-boot-starter-data-jpa-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:19:09 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.pom is up-to-date (lastModified: Sat Dec 16 00:05:38 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.module is up-to-date (lastModified: Sat Dec 16 00:05:39 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:19:43 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.1.14/spring-web-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:48 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:18:32 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:19:43 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.1.14/spring-web-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:49 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:18:32 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:46 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:17:59 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:17:59 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-jpa/3.3.5/spring-data-jpa-3.3.5.pom is up-to-date (lastModified: Fri Oct 18 12:03:46 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-aop/3.3.5/spring-boot-starter-aop-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:19:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:10:05 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.3.5/spring-boot-starter-jdbc-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:18:40 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.5.3.Final/hibernate-core-6.5.3.Final.pom is up-to-date (lastModified: Wed Sep 18 18:35:17 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.3.5/spring-boot-starter-jdbc-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:18:41 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-aop/3.3.5/spring-boot-starter-aop-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:19:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:10:05 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-jpa-parent/3.3.5/spring-data-jpa-parent-3.3.5.pom is up-to-date (lastModified: Fri Oct 18 12:03:40 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/build/spring-data-parent/3.3.5/spring-data-parent-3.3.5.pom is up-to-date (lastModified: Fri Oct 18 11:56:38 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/build/spring-data-build/3.3.5/spring-data-build-3.3.5.pom is up-to-date (lastModified: Fri Oct 18 11:56:36 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.pom is up-to-date (lastModified: Tue Jun 14 13:30:18 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.2/snakeyaml-2.2.pom is up-to-date (lastModified: Sun Aug 27 10:26:37 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:20:27 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:20:18 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:18:28 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom is up-to-date (lastModified: Tue Feb 23 19:00:23 CET 2021).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:20:27 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:18:28 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:20:18 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:10:00 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:10:01 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 19:45:33 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 19:45:31 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 19:15:55 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 19:45:42 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.17.2/jackson-base-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 18:49:01 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-modules-java8/2.17.2/jackson-modules-java8-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 19:45:32 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom is up-to-date (lastModified: Sun Feb 04 09:35:24 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module is up-to-date (lastModified: Sun Feb 04 09:35:25 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.module is up-to-date (lastModified: Fri Jul 05 19:15:54 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.module is up-to-date (lastModified: Fri Jul 05 19:45:38 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.module is up-to-date (lastModified: Fri Jul 05 19:45:39 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.module is up-to-date (lastModified: Fri Jul 05 19:45:37 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.pom is up-to-date (lastModified: Thu Oct 03 21:17:44 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31.pom is up-to-date (lastModified: Thu Oct 03 21:18:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31.pom is up-to-date (lastModified: Thu Oct 03 21:18:18 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:10:04 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6.pom is up-to-date (lastModified: Mon Oct 14 23:50:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:10:04 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.1.14/spring-context-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:10:03 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:59 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:10:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.1.14/spring-context-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:10:03 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:59 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:10:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.pom is up-to-date (lastModified: Sat May 11 08:29:55 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.pom is up-to-date (lastModified: Sat Nov 04 13:47:31 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:56 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:56 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.pom is up-to-date (lastModified: Thu Jul 06 02:34:37 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.pom is up-to-date (lastModified: Thu Jan 26 16:39:39 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.pom is up-to-date (lastModified: Fri Aug 16 01:03:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.7.0/classmate-1.7.0.pom is up-to-date (lastModified: Wed Jan 03 02:13:09 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.pom is up-to-date (lastModified: Fri Feb 25 12:15:26 CET 2022).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.pom is up-to-date (lastModified: Thu Mar 31 12:37:39 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/jboss/logging/logging-parent/1.0.1.Final/logging-parent-1.0.1.Final.pom is up-to-date (lastModified: Mon Jun 05 19:02:44 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.14.19/byte-buddy-parent-1.14.19.pom is up-to-date (lastModified: Fri Aug 16 01:03:59 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/56/oss-parent-56.pom is up-to-date (lastModified: Tue Nov 07 03:35:13 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.6/project-1.0.6.pom is up-to-date (lastModified: Mon Jan 13 16:50:47 CET 2020).
+Cached resource https://repo.maven.apache.org/maven2/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.module is up-to-date (lastModified: Thu Jan 26 16:39:41 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/39/jboss-parent-39.pom is up-to-date (lastModified: Thu Nov 04 23:30:59 CET 2021).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.pom is up-to-date (lastModified: Sat Oct 16 20:56:33 CEST 2021).
+Cached resource https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:04 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.pom is up-to-date (lastModified: Mon Feb 19 10:42:14 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.pom is up-to-date (lastModified: Sun May 21 19:28:37 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/io/smallrye/jandex/3.1.2/jandex-3.1.2.pom is up-to-date (lastModified: Thu Jun 08 17:10:03 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-runtime-parent/4.0.5/jaxb-runtime-parent-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:30 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.3/junit-bom-5.9.3.pom is up-to-date (lastModified: Wed Apr 26 08:27:55 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/io/smallrye/jandex-parent/3.1.2/jandex-parent-3.1.2.pom is up-to-date (lastModified: Thu Jun 08 17:10:03 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/xml/bind/jakarta.xml.bind-api-parent/4.0.2/jakarta.xml.bind-api-parent-4.0.2.pom is up-to-date (lastModified: Mon Feb 19 10:42:15 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/antlr/antlr4-master/4.13.0/antlr4-master-4.13.0.pom is up-to-date (lastModified: Sun May 21 19:28:22 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/4.0.5/jaxb-parent-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:30 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.3/junit-bom-5.9.3.module is up-to-date (lastModified: Wed Apr 26 08:27:56 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/io/smallrye/smallrye-build-parent/39/smallrye-build-parent-39.pom is up-to-date (lastModified: Wed Feb 15 11:59:17 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom is up-to-date (lastModified: Mon Jan 27 20:15:21 CET 2014).
+Cached resource https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/4.0.5/jaxb-bom-ext-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:28 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.pom is up-to-date (lastModified: Sat Aug 10 11:15:08 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-orm/6.1.14/spring-orm-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:53 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-commons/3.3.5/spring-data-commons-3.3.5.pom is up-to-date (lastModified: Fri Oct 18 11:59:02 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:49 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/2.0.16/slf4j-parent-2.0.16.pom is up-to-date (lastModified: Sat Aug 10 11:14:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-orm/6.1.14/spring-orm-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:53 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:50 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/slf4j/slf4j-bom/2.0.16/slf4j-bom-2.0.16.pom is up-to-date (lastModified: Sat Aug 10 11:14:54 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.pom is up-to-date (lastModified: Sat Aug 10 11:16:57 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.pom is up-to-date (lastModified: Wed Mar 06 13:32:50 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11.pom is up-to-date (lastModified: Tue Oct 15 12:21:51 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j/2.23.1/log4j-2.23.1.pom is up-to-date (lastModified: Wed Mar 06 13:32:44 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/ch/qos/logback/logback-parent/1.5.11/logback-parent-1.5.11.pom is up-to-date (lastModified: Tue Oct 15 12:21:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy-bom/3.0.21/groovy-bom-3.0.21.pom is up-to-date (lastModified: Fri Mar 01 14:19:40 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom is up-to-date (lastModified: Sun Dec 24 04:55:54 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.16/jackson-parent-2.16.pom is up-to-date (lastModified: Wed Nov 15 20:21:30 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom is up-to-date (lastModified: Wed Apr 28 00:16:38 CEST 2021).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/platform/jakartaee-api-parent/9.1.0/jakartaee-api-parent-9.1.0.pom is up-to-date (lastModified: Wed Apr 28 00:16:51 CEST 2021).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom is up-to-date (lastModified: Thu Feb 08 20:49:38 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom is up-to-date (lastModified: Fri Sep 30 12:29:54 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom is up-to-date (lastModified: Wed Dec 28 14:06:31 CET 2022).
+Cached resource https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom is up-to-date (lastModified: Tue Feb 13 08:40:50 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom is up-to-date (lastModified: Thu Feb 15 14:57:30 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.module is up-to-date (lastModified: Thu Feb 15 14:57:30 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:57 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:57 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 18:50:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.pom is up-to-date (lastModified: Fri Jul 05 19:03:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.module is up-to-date (lastModified: Fri Jul 05 19:03:39 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.module is up-to-date (lastModified: Fri Jul 05 18:50:57 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6.pom is up-to-date (lastModified: Mon Oct 14 23:50:41 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.pom is up-to-date (lastModified: Thu Feb 15 09:14:27 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:09 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11.pom is up-to-date (lastModified: Tue Oct 15 12:21:23 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.pom is up-to-date (lastModified: Wed Mar 06 13:32:45 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.pom is up-to-date (lastModified: Thu Feb 15 10:33:57 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:03 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.pom is up-to-date (lastModified: Tue Apr 11 17:07:17 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/eclipse/angus/angus-activation-project/2.0.2/angus-activation-project-2.0.2.pom is up-to-date (lastModified: Thu Feb 15 10:33:58 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-txw-parent/4.0.5/jaxb-txw-parent-4.0.5.pom is up-to-date (lastModified: Wed Mar 06 07:01:28 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons/4.1.2/istack-commons-4.1.2.pom is up-to-date (lastModified: Tue Apr 11 17:07:10 CEST 2023).
+Excluding []
+Excluding []
+Excluding []
+Starting process 'command '/usr/libexec/java_home''. Working directory: /Users/mgomes2/.gradle/daemon/8.10.2 Command: /usr/libexec/java_home -V
+Successfully started process 'command '/usr/libexec/java_home''
+Excluding []
+Excluding []
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-test/3.3.5/spring-boot-starter-test-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:18:03 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.10.5/junit-platform-launcher-1.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.10.5/junit-platform-launcher-1.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:48 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-test/3.3.5/spring-boot-starter-test-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:18:03 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.10.5/junit-platform-engine-1.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:29 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-engine/1.10.5/junit-platform-engine-1.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:29 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-test-autoconfigure/3.3.5/spring-boot-test-autoconfigure-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:17:39 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-test/3.3.5/spring-boot-test-3.3.5.pom is up-to-date (lastModified: Thu Oct 24 15:17:44 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-test-autoconfigure/3.3.5/spring-boot-test-autoconfigure-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:17:40 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-test/3.3.5/spring-boot-test-3.3.5.module is up-to-date (lastModified: Thu Oct 24 15:17:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.pom is up-to-date (lastModified: Sun Feb 04 22:54:53 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest/2.2/hamcrest-2.2.pom is up-to-date (lastModified: Wed Oct 16 22:53:28 CEST 2019).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/5.10.5/junit-jupiter-5.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.pom is up-to-date (lastModified: Fri Mar 01 10:01:26 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-test/6.1.14/spring-test-6.1.14.pom is up-to-date (lastModified: Thu Oct 17 10:09:50 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.pom is up-to-date (lastModified: Fri Mar 01 10:01:30 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.pom is up-to-date (lastModified: Fri Jun 28 15:03:19 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.pom is up-to-date (lastModified: Wed Aug 07 10:30:21 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.pom is up-to-date (lastModified: Tue Jan 10 16:20:03 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/net/minidev/json-smart/2.5.1/json-smart-2.5.1.pom is up-to-date (lastModified: Thu Mar 21 06:10:29 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.pom is up-to-date (lastModified: Sat Jan 20 11:04:54 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-test/6.1.14/spring-test-6.1.14.module is up-to-date (lastModified: Thu Oct 17 10:09:51 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/5.10.5/junit-jupiter-5.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/awaitility/awaitility-parent/4.2.2/awaitility-parent-4.2.2.pom is up-to-date (lastModified: Wed Aug 07 10:29:01 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.module is up-to-date (lastModified: Sat Jan 20 11:04:55 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/xmlunit/xmlunit-parent/2.9.1/xmlunit-parent-2.9.1.pom is up-to-date (lastModified: Tue Jan 10 16:19:46 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.pom is up-to-date (lastModified: Thu Jul 06 14:25:33 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.module is up-to-date (lastModified: Thu Jul 06 14:25:37 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.10.5/junit-platform-commons-1.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:19 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.10.5/junit-platform-commons-1.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:24 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.pom is up-to-date (lastModified: Thu Mar 21 06:09:33 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.10.5/junit-jupiter-engine-5.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:35:05 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.10.5/junit-jupiter-api-5.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.10.5/junit-jupiter-params-5.10.5.pom is up-to-date (lastModified: Fri Oct 04 14:34:56 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.10.5/junit-jupiter-engine-5.10.5.module is up-to-date (lastModified: Fri Oct 04 14:35:10 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.10.5/junit-jupiter-api-5.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.10.5/junit-jupiter-params-5.10.5.module is up-to-date (lastModified: Fri Oct 04 14:34:56 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/objenesis/objenesis/3.3/objenesis-3.3.pom is up-to-date (lastModified: Mon Aug 01 00:30:11 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.pom is up-to-date (lastModified: Fri Aug 16 01:04:00 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/objenesis/objenesis-parent/3.3/objenesis-parent-3.3.pom is up-to-date (lastModified: Mon Aug 01 00:30:31 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.pom is up-to-date (lastModified: Fri Feb 28 13:44:59 CET 2014).
+Cached resource https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.6/asm-9.6.pom is up-to-date (lastModified: Sat Sep 30 13:18:34 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5.1/ow2-1.5.1.pom is up-to-date (lastModified: Fri Apr 09 12:28:51 CEST 2021).
+Excluding []
+Excluding []
+Excluding []
+Tasks to be executed: [task ':clean', task ':compileJava', task ':processResources', task ':classes', task ':resolveMainClassName', task ':bootJar', task ':jar', task ':assemble', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test', task ':check', task ':build']
+Tasks that were excluded: []
+Resolve mutations for :clean (Thread[Execution worker,5,main]) started.
+:clean (Thread[Execution worker,5,main]) started.
+destroyer locations for task group 0 (Thread[included builds,5,main]) started.
+
+> Task :clean
+Caching disabled for task ':clean' because:
+  Build cache is disabled
+Task ':clean' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :compileJava (Thread[Execution worker,5,main]) started.
+:compileJava (Thread[Execution worker,5,main]) started.
+
+> Task :compileJava FAILED
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:47 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:18:00 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.1.14/spring-web-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:49 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:18:33 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-jpa/3.3.5/spring-data-jpa-3.3.5.jar is up-to-date (lastModified: Fri Oct 18 12:03:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:17:53 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-jpa/3.3.5/spring-boot-starter-data-jpa-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:19:10 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:10:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:19:44 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-aop/3.3.5/spring-boot-starter-aop-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:19:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-jdbc/3.3.5/spring-boot-starter-jdbc-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:18:41 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.5.3.Final/hibernate-core-6.5.3.Final.jar is up-to-date (lastModified: Wed Sep 18 18:35:17 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:20:19 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:20:28 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar is up-to-date (lastModified: Tue Jun 14 13:30:18 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.jar is up-to-date (lastModified: Thu Oct 24 15:18:29 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:10:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-orm/6.1.14/spring-orm-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:53 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.1.14/spring-context-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:10:04 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-commons/3.3.5/spring-data-commons-3.3.5.jar is up-to-date (lastModified: Fri Oct 18 11:59:01 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:56 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:50 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:10:05 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:59 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:10:01 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar is up-to-date (lastModified: Fri Jul 05 19:45:41 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar is up-to-date (lastModified: Fri Jul 05 19:45:33 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar is up-to-date (lastModified: Sun Aug 27 10:26:35 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar is up-to-date (lastModified: Fri Jul 05 18:50:58 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar is up-to-date (lastModified: Fri Jul 05 19:45:30 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar is up-to-date (lastModified: Fri Jul 05 19:15:54 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar is up-to-date (lastModified: Fri Jul 05 19:03:44 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar is up-to-date (lastModified: Thu Oct 03 21:17:45 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31.jar is up-to-date (lastModified: Thu Oct 03 21:18:22 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31.jar is up-to-date (lastModified: Thu Oct 03 21:18:31 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar is up-to-date (lastModified: Sat May 11 08:29:49 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar is up-to-date (lastModified: Fri Feb 25 12:15:26 CET 2022).
+Cached resource https://repo.maven.apache.org/maven2/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar is up-to-date (lastModified: Sat Nov 04 13:47:33 CET 2023).
+Cached resource https://repo.maven.apache.org/maven2/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar is up-to-date (lastModified: Thu Mar 31 12:37:39 CEST 2022).
+Cached resource https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar is up-to-date (lastModified: Sun May 21 19:28:40 CEST 2023).
+Cached resource https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11.jar is up-to-date (lastModified: Tue Oct 15 12:21:50 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar is up-to-date (lastModified: Sat Aug 10 11:16:56 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.jar is up-to-date (lastModified: Thu Oct 17 10:09:57 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6.jar is up-to-date (lastModified: Mon Oct 14 23:50:41 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11.jar is up-to-date (lastModified: Tue Oct 15 12:21:21 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar is up-to-date (lastModified: Wed Mar 06 13:32:45 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar is up-to-date (lastModified: Sat Aug 10 11:15:06 CEST 2024).
+Cached resource https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar is up-to-date (lastModified: Wed Mar 06 13:32:50 CET 2024).
+Cached resource https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6.jar is up-to-date (lastModified: Mon Oct 14 23:50:47 CEST 2024).
+Custom actions are attached to task ':compileJava'.
+Caching disabled for task ':compileJava' because:
+  Build cache is disabled
+Task ':compileJava' is not up-to-date because:
+  Task has failed previously.
+The input changes require a full rebuild for incremental task ':compileJava'.
+Compilation mode: in-process compilation
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain '/opt/homebrew/Cellar/openjdk@17/17.0.13/libexec/openjdk.jdk/Contents/Home'.
+Compiling with JDK Java compiler API.
+/Users/mgomes2/git/bitbucket/aim/aim1/src/main/java/com/atlassian/aim1/Message.java:3: error: package javax.persistence does not exist
+import javax.persistence.Entity;
+                        ^
+/Users/mgomes2/git/bitbucket/aim/aim1/src/main/java/com/atlassian/aim1/Message.java:4: error: package javax.persistence does not exist
+import javax.persistence.Id;
+                        ^
+/Users/mgomes2/git/bitbucket/aim/aim1/src/main/java/com/atlassian/aim1/Message.java:7: error: cannot find symbol
+@Entity
+ ^
+  symbol: class Entity
+/Users/mgomes2/git/bitbucket/aim/aim1/src/main/java/com/atlassian/aim1/Message.java:10: error: cannot find symbol
+    @Id
+     ^
+  symbol:   class Id
+  location: class Message
+4 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 6s
+2 actionable tasks: 2 executed
+Watched directory hierarchies: [/Users/mgomes2/git/bitbucket/aim/aim1]
