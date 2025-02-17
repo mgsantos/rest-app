@@ -12,6 +12,7 @@ public class Message {
     private String username;
     private String message;
     private Instant created;
+    private Instant updated;
 
     public Message() {
     }
@@ -21,6 +22,7 @@ public class Message {
         this.username = username;
         this.message = message;
         this.created = created;
+        this.updated = created;
     }
 
     public String getId() {
@@ -54,4 +56,13 @@ public class Message {
     public void setCreated(Instant created) {
         this.created = created;
     }
+
+    public Instant getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(Instant updated) {
+        this.updated = updated;
+    }
+
 }

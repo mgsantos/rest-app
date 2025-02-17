@@ -1,10 +1,13 @@
 package com.atlassian.aim1;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @RestController
@@ -12,49 +15,30 @@ import java.util.UUID;
 public class MessageController {
 
     @Autowired
-    private MessageRepository repository;
+    private MessageService messageService;
 
     @PostMapping(consumes = "application/json", produces = "application/json")
     public Message createMessage(@RequestBody MessageRequest request) {
+        return messageService.upsertMessage(null, request);
+    }
 
-        Message message = new Message(
-                UUID.randomUUID().toString(),
-                request.getUser(),
-                request.getMessage(),
-                Instant.now()
-        );
-        return repository.save(message);
-        // Message Service -> repository
-        /// Controller -> upsert (update and insert) service -> DAO (repository)
-        /// Business Logic
-        /// Message Object -> does the object exist in the repository ? If exists, update, if it doesn't, insert it
+    @PutMapping(value = "/{id}", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<Message> updateMessage(@PathVariable String id, @RequestBody MessageRequest request) {
+        Message updatedMessage = messageService.upsertMessage(id, request);
+        return ResponseEntity.ok(updatedMessage);
     }
 
     @GetMapping(produces = "application/json")
     public List<Message> getMessages() {
-        return repository.findAll();
+        return messageService.getAllMessages();
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteMessage(@PathVariable String id) {
+        boolean isDeleted = messageService.deleteMessage(id);
+        return isDeleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
+    }
+
+
+
 }
-
-class MessageRequest {
-    private String user;
-    private String message;
-    public String getUser() {
-        return user;
-    }
-    public void setUser(String user) {
-        this.user = user;
-    }
-    public String getMessage() {
-        return message;
-    }
-    public void setMessage(String message) {
-        this.message = message;
-    }
-}
-
-// ADD POST MAPPING
-
-// ADD PUT MAPPING
-
-// ADD DELETE MAPPING

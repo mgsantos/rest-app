@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.atlassian.aim1.MessageControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-11-12T15:09:23" hostname="DQQ20X6L60" time="0.453">
+<testsuite name="com.atlassian.aim1.MessageControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-17T09:33:53" hostname="DQQ20X6L60" time="0.419">
   <properties/>
-  <testcase name="testCreateMessage()" classname="com.atlassian.aim1.MessageControllerTest" time="0.395"/>
-  <testcase name="testGetMessages()" classname="com.atlassian.aim1.MessageControllerTest" time="0.057"/>
-  <system-out><![CDATA[16:09:21.980 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.atlassian.aim1.MessageControllerTest]: MessageControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-16:09:22.031 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.atlassian.aim1.Aim1Application for test class com.atlassian.aim1.MessageControllerTest
+  <testcase name="testCreateMessage()" classname="com.atlassian.aim1.MessageControllerTest" time="0.383"/>
+  <testcase name="testGetMessages()" classname="com.atlassian.aim1.MessageControllerTest" time="0.035"/>
+  <system-out><![CDATA[10:33:52.266 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.atlassian.aim1.MessageControllerTest]: MessageControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:33:52.308 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.atlassian.aim1.Aim1Application for test class com.atlassian.aim1.MessageControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -15,25 +15,25 @@
 
  :: Spring Boot ::                (v3.3.5)
 
-2024-11-12T16:09:22.259+01:00  INFO 78988 --- [    Test worker] c.atlassian.aim1.MessageControllerTest   : Starting MessageControllerTest using Java 17.0.13 with PID 78988 (started by mgomes2 in /Users/mgomes2/git/bitbucket/aim/aim1)
-2024-11-12T16:09:22.260+01:00  INFO 78988 --- [    Test worker] c.atlassian.aim1.MessageControllerTest   : No active profile set, falling back to 1 default profile: "default"
-2024-11-12T16:09:22.465+01:00  INFO 78988 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-12T16:09:22.481+01:00  INFO 78988 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interface.
-2024-11-12T16:09:22.631+01:00  INFO 78988 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-12T16:09:22.647+01:00  INFO 78988 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-11-12T16:09:22.657+01:00  INFO 78988 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-12T16:09:22.752+01:00  INFO 78988 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-12T16:09:22.761+01:00  INFO 78988 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-12T16:09:22.828+01:00  INFO 78988 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-11-12T16:09:22.828+01:00  INFO 78988 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-12T16:09:22.839+01:00  WARN 78988 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-11-12T16:09:23.113+01:00  INFO 78988 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-12T16:09:23.134+01:00  INFO 78988 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-12T16:09:23.264+01:00  WARN 78988 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-12T16:09:23.403+01:00  INFO 78988 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-11-12T16:09:23.403+01:00  INFO 78988 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-11-12T16:09:23.404+01:00  INFO 78988 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2024-11-12T16:09:23.419+01:00  INFO 78988 --- [    Test worker] c.atlassian.aim1.MessageControllerTest   : Started MessageControllerTest in 1.244 seconds (process running for 1.786)
+2025-02-17T10:33:52.422+01:00  INFO 90822 --- [    Test worker] c.atlassian.aim1.MessageControllerTest   : Starting MessageControllerTest using Java 17.0.13 with PID 90822 (started by mgomes2 in /Users/mgomes2/git/bitbucket/aim/aim1)
+2025-02-17T10:33:52.423+01:00  INFO 90822 --- [    Test worker] c.atlassian.aim1.MessageControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2025-02-17T10:33:52.605+01:00  INFO 90822 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-17T10:33:52.620+01:00  INFO 90822 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interface.
+2025-02-17T10:33:52.756+01:00  INFO 90822 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-17T10:33:52.771+01:00  INFO 90822 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-02-17T10:33:52.780+01:00  INFO 90822 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-17T10:33:52.873+01:00  INFO 90822 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-17T10:33:52.882+01:00  INFO 90822 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-17T10:33:52.941+01:00  INFO 90822 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-02-17T10:33:52.942+01:00  INFO 90822 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-17T10:33:52.949+01:00  WARN 90822 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-17T10:33:53.188+01:00  INFO 90822 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-17T10:33:53.206+01:00  INFO 90822 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-17T10:33:53.323+01:00  WARN 90822 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-17T10:33:53.446+01:00  INFO 90822 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-02-17T10:33:53.446+01:00  INFO 90822 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-02-17T10:33:53.447+01:00  INFO 90822 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-02-17T10:33:53.459+01:00  INFO 90822 --- [    Test worker] c.atlassian.aim1.MessageControllerTest   : Started MessageControllerTest in 1.109 seconds (process running for 1.515)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
