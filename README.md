@@ -59,6 +59,14 @@ rm -rf .gradle
 
    The application will start on `http://localhost:8080`.
 
+OR
+
+5. **Run the application and the database using Docker Compose**:
+```
+cd Docker
+docker-compose -f persistent_web_application.yml up --build
+```
+
 ### API Endpoints
 
 - **Create a Message**
