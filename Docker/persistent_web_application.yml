@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  demo_postgres:
+    container_name: demo_postgres
+    image: postgres:13.6
+    networks:
+      - demo_net
+    volumes:
+      - demo_postgresdata:/var/lib/postgresql/data
+    ports:
+      - '5055:5432' # Map the container's port 5432 to host's port 5055
+    environment:
+      - POSTGRES_USER=demodbuser
+      - POSTGRES_PASSWORD=demodbpassword
+      - POSTGRES_DB=demo
+      - POSTGRES_ENCODING=UNICODE
+      - POSTGRES_COLLATE=C
+      - POSTGRES_COLLATE_TYPE=C
+
+  demo_app:
+    build:
+      context: ..
+      dockerfile: Docker/DockerFile
+    networks:
+      - demo_net
+    container_name: demo_app
+    depends_on:
+      - demo_postgres
+    ports:
+      - '9080:8080'  # Map the container's port 8080 to host's port 9080
+
+volumes:
+  demo_postgresdata:
+    external: false
+
+networks:
+  demo_net:
+    driver: bridge
