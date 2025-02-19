@@ -16,23 +16,25 @@ public class MessageService {
 
     public Message upsertMessage(String id, MessageRequest request) {
         Message message;
-        if (id != null) {
-            // Update existing message
-            Optional<Message> existingMessage = repository.findById(id);
-            if (existingMessage.isPresent()) {
-                message = existingMessage.get();
-                message.setUser(request.getUser());
-                message.setMessage(request.getMessage());
-                message.setUpdated(Instant.now());
-            } else {
-                // If it doesn't exist, create a new message
-                message = new Message(UUID.randomUUID().toString(), request.getUser(), request.getMessage(), Instant.now());
-            }
-        } else {
+        if (id == null) {
             // Create a new message since id is null
             message = new Message(UUID.randomUUID().toString(), request.getUser(), request.getMessage(), Instant.now());
+            return repository.save(message);
         }
+
+        Optional<Message> existingMessage = repository.findById(id);
+        if (existingMessage.isPresent()) {
+            message = existingMessage.get();
+            message.setUser(request.getUser());
+            message.setMessage(request.getMessage());
+            message.setUpdated(Instant.now());
+        } else {
+            // If it doesn't exist, create a new message
+            message = new Message(UUID.randomUUID().toString(), request.getUser(), request.getMessage(), Instant.now());
+        }
+
         return repository.save(message);
+
     }
 
     public List<Message> getAllMessages() {
