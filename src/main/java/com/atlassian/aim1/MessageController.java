@@ -25,9 +25,13 @@ public class MessageController {
     }
 
     @GetMapping(produces = "application/json")
-    public List<Message> getMessages() {
-        return messageService.getAllMessages();
+    public List<Message> findMessage(@RequestParam(required = false) String keyword) {
+        if (keyword == null || keyword.isEmpty()) {
+            return messageService.getAllMessages();
+        } else
+            return messageService.findMessage(keyword);
     }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMessage(@PathVariable String id) {

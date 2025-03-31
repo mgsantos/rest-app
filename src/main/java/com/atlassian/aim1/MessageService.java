@@ -37,6 +37,12 @@ public class MessageService {
 
     }
 
+    // Get last updated for example (1 week)
+    public List<Message> findMessage(String keyword) {
+        return repository.searchByMessage(keyword);
+    }
+
+    // Get last updated for example (1 week)
     public List<Message> getAllMessages() {
         return repository.findAll();
     }
