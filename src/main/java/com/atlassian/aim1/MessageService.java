@@ -4,9 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 @Service
 public class MessageService {
@@ -37,14 +41,16 @@ public class MessageService {
 
     }
 
-    // Get last updated for example (1 week)
-    public List<Message> findMessage(String keyword) {
-        return repository.searchByMessage(keyword);
+    public Page<Message> findMessage(String keyword, int page, int size, String sortField, String sortDirection) {
+        Sort sort = Sort.by(Sort.Direction.fromString(sortDirection), sortField);
+        Pageable pageable = PageRequest.of(page, size, sort);
+        return repository.searchByMessage(keyword, pageable);
     }
 
-    // Get last updated for example (1 week)
-    public List<Message> getAllMessages() {
-        return repository.findAll();
+    public Page<Message> getAllMessages(int page, int size, String sortField, String sortDirection) {
+        Sort sort = Sort.by(Sort.Direction.fromString(sortDirection), sortField);
+        Pageable pageable = PageRequest.of(page, size, sort);
+        return repository.findAll(pageable);
     }
 
     public boolean deleteMessage(String id) {

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import org.springframework.data.domain.Page;
 
 @RestController
 @RequestMapping("/messages")
@@ -25,11 +25,17 @@ public class MessageController {
     }
 
     @GetMapping(produces = "application/json")
-    public List<Message> findMessage(@RequestParam(required = false) String keyword) {
+    public Page<Message> findMessage(
+            @RequestParam(required = false) String keyword,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sortField,
+            @RequestParam(defaultValue = "asc") String sortDirection) {
         if (keyword == null || keyword.isEmpty()) {
-            return messageService.getAllMessages();
-        } else
-            return messageService.findMessage(keyword);
+            return messageService.getAllMessages(page, size, sortField, sortDirection);
+        } else {
+            return messageService.findMessage(keyword, page, size, sortField, sortDirection);
+        }
     }
 
 
