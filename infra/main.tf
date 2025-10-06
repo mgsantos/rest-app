@@ -143,68 +143,68 @@ resource "aws_ecr_repository" "app_repo" {
   }
 }
 
-resource "null_resource" "ecr_cleanup" {
-  triggers = {
-    repository_name = aws_ecr_repository.app_repo.name
-    region          = var.aws_region
-    account_id      = data.aws_caller_identity.current.account_id
-  }
+#resource "null_resource" "ecr_cleanup" {
+#  triggers = {
+#    repository_name = aws_ecr_repository.app_repo.name
+#    region          = var.aws_region
+#    account_id      = data.aws_caller_identity.current.account_id
+#  }
+#
+#  provisioner "local-exec" {
+#    when    = destroy
+#    command = <<-EOF
+#      #!/bin/bash
+#      set -e
+#      REPO_NAME="${self.triggers.repository_name}"
+#      REGION="${self.triggers.region}"
+#      ACCOUNT_ID="${self.triggers.account_id}"
+#      
+#      echo "Attempting to delete images from ECR repository: $REPO_NAME in region $REGION"
+#      
+#      # Check if repository exists
+#      aws ecr describe-repositories --repository-names "$REPO_NAME" --region "$REGION" 2>/dev/null || {
+#        echo "Repository $REPO_NAME does not exist or already deleted"
+#        exit 0
+#      }
+#      
+#      # Get list of image digests
+#      IMAGES=$(aws ecr describe-images --repository-name "$REPO_NAME" --region "$REGION" --query 'imageDetails[*].imageDigest' --output text 2>/dev/null || echo "")
+#      
+#      if [ -z "$IMAGES" ]; then
+#        echo "No images found in repository $REPO_NAME"
+#        exit 0
+#      fi
+#      
+#      # Delete each image by digest
+#      for DIGEST in $IMAGES; do
+#        echo "Deleting image with digest: $DIGEST"
+#        aws ecr batch-delete-image --repository-name "$REPO_NAME" --image-ids imageDigest=$DIGEST --region "$REGION" && echo "Deleted image $DIGEST" || echo "Failed to delete image $DIGEST, continuing"
+#      done
+#      
+#      echo "Image cleanup complete for $REPO_NAME"
+#    EOF
+#  }
+#
+#  depends_on = [aws_ecr_repository.app_repo]
+#}
 
-  provisioner "local-exec" {
-    when    = destroy
-    command = <<-EOF
-      #!/bin/bash
-      set -e
-      REPO_NAME="${self.triggers.repository_name}"
-      REGION="${self.triggers.region}"
-      ACCOUNT_ID="${self.triggers.account_id}"
-      
-      echo "Attempting to delete images from ECR repository: $REPO_NAME in region $REGION"
-      
-      # Check if repository exists
-      aws ecr describe-repositories --repository-names "$REPO_NAME" --region "$REGION" 2>/dev/null || {
-        echo "Repository $REPO_NAME does not exist or already deleted"
-        exit 0
-      }
-      
-      # Get list of image digests
-      IMAGES=$(aws ecr describe-images --repository-name "$REPO_NAME" --region "$REGION" --query 'imageDetails[*].imageDigest' --output text 2>/dev/null || echo "")
-      
-      if [ -z "$IMAGES" ]; then
-        echo "No images found in repository $REPO_NAME"
-        exit 0
-      fi
-      
-      # Delete each image by digest
-      for DIGEST in $IMAGES; do
-        echo "Deleting image with digest: $DIGEST"
-        aws ecr batch-delete-image --repository-name "$REPO_NAME" --image-ids imageDigest=$DIGEST --region "$REGION" && echo "Deleted image $DIGEST" || echo "Failed to delete image $DIGEST, continuing"
-      done
-      
-      echo "Image cleanup complete for $REPO_NAME"
-    EOF
-  }
-
-  depends_on = [aws_ecr_repository.app_repo]
-}
-
-resource "null_resource" "build_and_push" {
-  depends_on = [aws_ecr_repository.app_repo]
-
-  provisioner "local-exec" {
-    command = <<-EOF
-      cd ${path.module}/..
-      docker buildx create --name mybuilder --use || true
-      aws ecr get-login-password --region ${var.aws_region} | docker login --username AWS --password-stdin ${data.aws_caller_identity.current.account_id}.dkr.ecr.${var.aws_region}.amazonaws.com
-      docker buildx build --platform linux/amd64 -t ${aws_ecr_repository.app_repo.repository_url}:latest --push .
-    EOF
-  }
-
-  triggers = {
-    dockerfile_hash = filemd5("${path.module}/../Dockerfile")
-    src_hash        = join("", [for f in fileset("${path.module}/../src", "**") : filemd5("${path.module}/../src/${f}")])
-  }
-}
+#resource "null_resource" "build_and_push" {
+#  depends_on = [aws_ecr_repository.app_repo]
+#
+#  provisioner "local-exec" {
+#    command = <<-EOF
+#      cd ${path.module}/..
+#      docker buildx create --name mybuilder --use || true
+#      aws ecr get-login-password --region ${var.aws_region} | docker login --username AWS --password-stdin ${data.aws_caller_identity.current.account_id}.dkr.ecr.${var.aws_region}.amazonaws.com
+#      docker buildx build --platform linux/amd64 -t ${aws_ecr_repository.app_repo.repository_url}:latest --push .
+#    EOF
+#  }
+#
+#  triggers = {
+#    dockerfile_hash = filemd5("${path.module}/../Dockerfile")
+#    src_hash        = join("", [for f in fileset("${path.module}/../src", "**") : filemd5("${path.module}/../src/${f}")])
+#  }
+#}
 
 resource "aws_cloudwatch_log_group" "app_logs" {
   name              = "/ecs/${var.instance_name}-logs"
@@ -375,7 +375,8 @@ resource "aws_ecs_service" "app_service" {
     container_port   = var.app_port
   }
 
-  depends_on = [aws_lb_listener.app_listener, null_resource.build_and_push]
+  #depends_on = [aws_lb_listener.app_listener, null_resource.build_and_push]
+  depends_on = [aws_lb_listener.app_listener]
 
   tags = {
     Name = "${var.instance_name}-service"
