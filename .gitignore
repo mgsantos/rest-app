@@ -1,14 +1,20 @@
-# Gradle files
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.backup
+
+# Gradle
 .gradle/
 build/
+
+# IDE/Misc
+.DS_Store
+*.log
 
 # JAR files
 *.jar
 *.war
-
-# Logs
-*.log
-NOTES
 
 # Test results
 /test-results/

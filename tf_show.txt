@@ -1,0 +1,1186 @@
+# data.aws_ami.ubuntu:
+data "aws_ami" "ubuntu" {
+    architecture          = "x86_64"
+    arn                   = "arn:aws:ec2:us-west-2::image/ami-04c174f38aefd7dc8"
+    block_device_mappings = [
+        {
+            device_name  = "/dev/sda1"
+            ebs          = {
+                "delete_on_termination"      = "true"
+                "encrypted"                  = "false"
+                "iops"                       = "0"
+                "snapshot_id"                = "snap-014583736aba82fe3"
+                "throughput"                 = "0"
+                "volume_initialization_rate" = "0"
+                "volume_size"                = "8"
+                "volume_type"                = "gp3"
+            }
+            no_device    = [90mnull[0m[0m
+            virtual_name = [90mnull[0m[0m
+        },
+        {
+            device_name  = "/dev/sdb"
+            ebs          = {}
+            no_device    = [90mnull[0m[0m
+            virtual_name = "ephemeral0"
+        },
+        {
+            device_name  = "/dev/sdc"
+            ebs          = {}
+            no_device    = [90mnull[0m[0m
+            virtual_name = "ephemeral1"
+        },
+    ]
+    boot_mode             = "uefi-preferred"
+    creation_date         = "2025-10-01T10:51:31.000Z"
+    deprecation_time      = "2027-10-01T10:51:31.000Z"
+    description           = "Canonical, Ubuntu, 24.04, amd64 noble image"
+    ena_support           = true
+    hypervisor            = "xen"
+    id                    = "ami-04c174f38aefd7dc8"
+    image_id              = "ami-04c174f38aefd7dc8"
+    image_location        = "amazon/ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-20251001"
+    image_owner_alias     = "amazon"
+    image_type            = "machine"
+    imds_support          = "v2.0"
+    include_deprecated    = false
+    kernel_id             = [90mnull[0m[0m
+    last_launched_time    = [90mnull[0m[0m
+    most_recent           = true
+    name                  = "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-20251001"
+    owner_id              = "099720109477"
+    owners                = [
+        "099720109477",
+    ]
+    platform              = [90mnull[0m[0m
+    platform_details      = "Linux/UNIX"
+    product_codes         = []
+    public                = true
+    ramdisk_id            = [90mnull[0m[0m
+    region                = "us-west-2"
+    root_device_name      = "/dev/sda1"
+    root_device_type      = "ebs"
+    root_snapshot_id      = "snap-014583736aba82fe3"
+    sriov_net_support     = "simple"
+    state                 = "available"
+    state_reason          = {
+        "code"    = "UNSET"
+        "message" = "UNSET"
+    }
+    tags                  = {}
+    tpm_support           = [90mnull[0m[0m
+    usage_operation       = "RunInstances"
+    virtualization_type   = "hvm"
+
+    filter {
+        name   = "name"
+        values = [
+            "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-*",
+        ]
+    }
+}
+
+# data.aws_caller_identity.current:
+data "aws_caller_identity" "current" {
+    account_id = "989886805682"
+    arn        = "arn:aws:iam::989886805682:user/ec2_user"
+    id         = "989886805682"
+    user_id    = "AIDA6M6OZ62ZDS65VTZBE"
+}
+
+# aws_cloudwatch_log_group.app_logs:
+resource "aws_cloudwatch_log_group" "app_logs" {
+    arn               = "arn:aws:logs:us-west-2:989886805682:log-group:/ecs/aim1-logs"
+    id                = "/ecs/aim1-logs"
+    kms_key_id        = [90mnull[0m[0m
+    log_group_class   = "STANDARD"
+    name              = "/ecs/aim1-logs"
+    name_prefix       = [90mnull[0m[0m
+    region            = "us-west-2"
+    retention_in_days = 7
+    skip_destroy      = false
+    tags              = {
+        "Name" = "aim1-logs"
+    }
+    tags_all          = {
+        "Name" = "aim1-logs"
+    }
+}
+
+# aws_db_instance.app_db:
+resource "aws_db_instance" "app_db" {
+    address                               = "aim1-app-db.c1awawa0yyas.us-west-2.rds.amazonaws.com"
+    allocated_storage                     = 20
+    apply_immediately                     = false
+    arn                                   = "arn:aws:rds:us-west-2:989886805682:db:aim1-app-db"
+    auto_minor_version_upgrade            = true
+    availability_zone                     = "us-west-2b"
+    backup_retention_period               = 0
+    backup_target                         = "region"
+    backup_window                         = "08:05-08:35"
+    ca_cert_identifier                    = "rds-ca-rsa2048-g1"
+    character_set_name                    = [90mnull[0m[0m
+    copy_tags_to_snapshot                 = false
+    custom_iam_instance_profile           = [90mnull[0m[0m
+    customer_owned_ip_enabled             = false
+    database_insights_mode                = "standard"
+    db_name                               = "demo"
+    db_subnet_group_name                  = "aim1-rds-subnet-group"
+    dedicated_log_volume                  = false
+    delete_automated_backups              = true
+    deletion_protection                   = false
+    domain                                = [90mnull[0m[0m
+    domain_auth_secret_arn                = [90mnull[0m[0m
+    domain_fqdn                           = [90mnull[0m[0m
+    domain_iam_role_name                  = [90mnull[0m[0m
+    domain_ou                             = [90mnull[0m[0m
+    endpoint                              = "aim1-app-db.c1awawa0yyas.us-west-2.rds.amazonaws.com:5432"
+    engine                                = "postgres"
+    engine_lifecycle_support              = "open-source-rds-extended-support"
+    engine_version                        = "17.4"
+    engine_version_actual                 = "17.4"
+    hosted_zone_id                        = "Z1PVIF0B656C1W"
+    iam_database_authentication_enabled   = false
+    id                                    = "db-BSDS2W2A5U7ZJ24FXGVMEXALR4"
+    identifier                            = "aim1-app-db"
+    identifier_prefix                     = [90mnull[0m[0m
+    instance_class                        = "db.t4g.micro"
+    iops                                  = 0
+    kms_key_id                            = "arn:aws:kms:us-west-2:989886805682:key/fc8b643e-9267-4d9b-85ca-2b7c2d6398a2"
+    latest_restorable_time                = [90mnull[0m[0m
+    license_model                         = "postgresql-license"
+    listener_endpoint                     = []
+    maintenance_window                    = "sat:10:37-sat:11:07"
+    master_user_secret                    = []
+    max_allocated_storage                 = 0
+    monitoring_interval                   = 0
+    monitoring_role_arn                   = [90mnull[0m[0m
+    multi_az                              = false
+    nchar_character_set_name              = [90mnull[0m[0m
+    network_type                          = "IPV4"
+    option_group_name                     = "default:postgres-17"
+    parameter_group_name                  = "default.postgres17"
+    password                              = (sensitive value)
+    password_wo                           = (write-only attribute)
+    performance_insights_enabled          = false
+    performance_insights_kms_key_id       = [90mnull[0m[0m
+    performance_insights_retention_period = 0
+    port                                  = 5432
+    publicly_accessible                   = false
+    region                                = "us-west-2"
+    replica_mode                          = [90mnull[0m[0m
+    replicas                              = []
+    replicate_source_db                   = [90mnull[0m[0m
+    resource_id                           = "db-BSDS2W2A5U7ZJ24FXGVMEXALR4"
+    skip_final_snapshot                   = true
+    status                                = "available"
+    storage_encrypted                     = true
+    storage_throughput                    = 0
+    storage_type                          = "gp2"
+    tags                                  = {
+        "Name" = "aim1-app-db"
+    }
+    tags_all                              = {
+        "Name" = "aim1-app-db"
+    }
+    timezone                              = [90mnull[0m[0m
+    username                              = "demodbuser"
+    vpc_security_group_ids                = [
+        "sg-0839a0d2876d77db2",
+    ]
+}
+
+# aws_db_subnet_group.rds_subnet_group:
+resource "aws_db_subnet_group" "rds_subnet_group" {
+    arn                     = "arn:aws:rds:us-west-2:989886805682:subgrp:aim1-rds-subnet-group"
+    description             = "Managed by Terraform"
+    id                      = "aim1-rds-subnet-group"
+    name                    = "aim1-rds-subnet-group"
+    name_prefix             = [90mnull[0m[0m
+    region                  = "us-west-2"
+    subnet_ids              = [
+        "subnet-018aa2dbabab30a7b",
+        "subnet-0822cbd9f0720f987",
+    ]
+    supported_network_types = [
+        "IPV4",
+    ]
+    tags                    = {
+        "Name" = "aim1-rds-subnet-group"
+    }
+    tags_all                = {
+        "Name" = "aim1-rds-subnet-group"
+    }
+    vpc_id                  = "vpc-0978c5f5739ea63cb"
+}
+
+# aws_ecr_repository.app_repo:
+resource "aws_ecr_repository" "app_repo" {
+    arn                  = "arn:aws:ecr:us-west-2:989886805682:repository/aim1-app-repo"
+    id                   = "aim1-app-repo"
+    image_tag_mutability = "MUTABLE"
+    name                 = "aim1-app-repo"
+    region               = "us-west-2"
+    registry_id          = "989886805682"
+    repository_url       = "989886805682.dkr.ecr.us-west-2.amazonaws.com/aim1-app-repo"
+    tags                 = {
+        "Name" = "aim1-app-repo"
+    }
+    tags_all             = {
+        "Name" = "aim1-app-repo"
+    }
+
+    encryption_configuration {
+        encryption_type = "AES256"
+        kms_key         = [90mnull[0m[0m
+    }
+
+    image_scanning_configuration {
+        scan_on_push = false
+    }
+}
+
+# aws_ecs_cluster.app_cluster:
+resource "aws_ecs_cluster" "app_cluster" {
+    arn      = "arn:aws:ecs:us-west-2:989886805682:cluster/aim1-cluster"
+    id       = "arn:aws:ecs:us-west-2:989886805682:cluster/aim1-cluster"
+    name     = "aim1-cluster"
+    region   = "us-west-2"
+    tags     = {
+        "Name" = "aim1-cluster"
+    }
+    tags_all = {
+        "Name" = "aim1-cluster"
+    }
+
+    setting {
+        name  = "containerInsights"
+        value = "disabled"
+    }
+}
+
+# aws_ecs_service.app_service:
+resource "aws_ecs_service" "app_service" {
+    arn                                = "arn:aws:ecs:us-west-2:989886805682:service/aim1-cluster/aim1-service"
+    availability_zone_rebalancing      = "ENABLED"
+    cluster                            = "arn:aws:ecs:us-west-2:989886805682:cluster/aim1-cluster"
+    deployment_maximum_percent         = 200
+    deployment_minimum_healthy_percent = 100
+    desired_count                      = 1
+    enable_ecs_managed_tags            = false
+    enable_execute_command             = false
+    health_check_grace_period_seconds  = 0
+    iam_role                           = "/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
+    id                                 = "arn:aws:ecs:us-west-2:989886805682:service/aim1-cluster/aim1-service"
+    launch_type                        = "FARGATE"
+    name                               = "aim1-service"
+    platform_version                   = "LATEST"
+    propagate_tags                     = "NONE"
+    region                             = "us-west-2"
+    scheduling_strategy                = "REPLICA"
+    tags                               = {
+        "Name" = "aim1-service"
+    }
+    tags_all                           = {
+        "Name" = "aim1-service"
+    }
+    task_definition                    = "arn:aws:ecs:us-west-2:989886805682:task-definition/aim1-task:1"
+    triggers                           = {}
+    wait_for_steady_state              = false
+
+    deployment_circuit_breaker {
+        enable   = false
+        rollback = false
+    }
+
+    deployment_configuration {
+        bake_time_in_minutes = "0"
+        strategy             = "ROLLING"
+    }
+
+    deployment_controller {
+        type = "ECS"
+    }
+
+    load_balancer {
+        container_name   = "aim1-container"
+        container_port   = 8080
+        elb_name         = [90mnull[0m[0m
+        target_group_arn = "arn:aws:elasticloadbalancing:us-west-2:989886805682:targetgroup/aim1-tg/0b9ab8aefb69a128"
+    }
+
+    network_configuration {
+        assign_public_ip = false
+        security_groups  = [
+            "sg-0b4daa7efe3eebe18",
+        ]
+        subnets          = [
+            "subnet-018aa2dbabab30a7b",
+            "subnet-0822cbd9f0720f987",
+        ]
+    }
+}
+
+# aws_ecs_task_definition.app_task:
+resource "aws_ecs_task_definition" "app_task" {
+    arn                      = "arn:aws:ecs:us-west-2:989886805682:task-definition/aim1-task:1"
+    arn_without_revision     = "arn:aws:ecs:us-west-2:989886805682:task-definition/aim1-task"
+    container_definitions    = (sensitive value)
+    cpu                      = "256"
+    enable_fault_injection   = false
+    execution_role_arn       = "arn:aws:iam::989886805682:role/aim1-ecs-task-execution-role"
+    family                   = "aim1-task"
+    id                       = "aim1-task"
+    ipc_mode                 = [90mnull[0m[0m
+    memory                   = "512"
+    network_mode             = "awsvpc"
+    pid_mode                 = [90mnull[0m[0m
+    region                   = "us-west-2"
+    requires_compatibilities = [
+        "FARGATE",
+    ]
+    revision                 = 1
+    skip_destroy             = false
+    tags                     = {
+        "Name" = "aim1-task"
+    }
+    tags_all                 = {
+        "Name" = "aim1-task"
+    }
+    task_role_arn            = [90mnull[0m[0m
+    track_latest             = false
+}
+
+# aws_iam_role.ecs_task_execution_role:
+resource "aws_iam_role" "ecs_task_execution_role" {
+    arn                   = "arn:aws:iam::989886805682:role/aim1-ecs-task-execution-role"
+    assume_role_policy    = jsonencode(
+        {
+            Statement = [
+                {
+                    Action    = "sts:AssumeRole"
+                    Effect    = "Allow"
+                    Principal = {
+                        Service = "ecs-tasks.amazonaws.com"
+                    }
+                },
+            ]
+            Version   = "2012-10-17"
+        }
+    )
+    create_date           = "2025-10-02T10:07:51Z"
+    description           = [90mnull[0m[0m
+    force_detach_policies = false
+    id                    = "aim1-ecs-task-execution-role"
+    managed_policy_arns   = []
+    max_session_duration  = 3600
+    name                  = "aim1-ecs-task-execution-role"
+    name_prefix           = [90mnull[0m[0m
+    path                  = "/"
+    permissions_boundary  = [90mnull[0m[0m
+    tags                  = {
+        "Name" = "aim1-ecs-task-execution-role"
+    }
+    tags_all              = {
+        "Name" = "aim1-ecs-task-execution-role"
+    }
+    unique_id             = "AROA6M6OZ62ZNU4H6LT4P"
+}
+
+# aws_iam_role_policy_attachment.ecs_task_execution_role_policy:
+resource "aws_iam_role_policy_attachment" "ecs_task_execution_role_policy" {
+    id         = "aim1-ecs-task-execution-role/arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+    policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+    role       = "aim1-ecs-task-execution-role"
+}
+
+# aws_lb.app_alb:
+resource "aws_lb" "app_alb" {
+    arn                                                          = "arn:aws:elasticloadbalancing:us-west-2:989886805682:loadbalancer/app/aim1-alb/fe4199549c115184"
+    arn_suffix                                                   = "app/aim1-alb/fe4199549c115184"
+    client_keep_alive                                            = 3600
+    customer_owned_ipv4_pool                                     = [90mnull[0m[0m
+    desync_mitigation_mode                                       = "defensive"
+    dns_name                                                     = "aim1-alb-437464140.us-west-2.elb.amazonaws.com"
+    drop_invalid_header_fields                                   = false
+    enable_cross_zone_load_balancing                             = true
+    enable_deletion_protection                                   = false
+    enable_http2                                                 = true
+    enable_tls_version_and_cipher_suite_headers                  = false
+    enable_waf_fail_open                                         = false
+    enable_xff_client_port                                       = false
+    enable_zonal_shift                                           = false
+    enforce_security_group_inbound_rules_on_private_link_traffic = [90mnull[0m[0m
+    id                                                           = "arn:aws:elasticloadbalancing:us-west-2:989886805682:loadbalancer/app/aim1-alb/fe4199549c115184"
+    idle_timeout                                                 = 60
+    internal                                                     = false
+    ip_address_type                                              = "ipv4"
+    load_balancer_type                                           = "application"
+    name                                                         = "aim1-alb"
+    name_prefix                                                  = [90mnull[0m[0m
+    preserve_host_header                                         = false
+    region                                                       = "us-west-2"
+    security_groups                                              = [
+        "sg-035e89a934bacd0fa",
+    ]
+    subnets                                                      = [
+        "subnet-0bc826e46d46c9886",
+        "subnet-0e579b7c00c425b47",
+    ]
+    tags                                                         = {
+        "Name" = "aim1-alb"
+    }
+    tags_all                                                     = {
+        "Name" = "aim1-alb"
+    }
+    vpc_id                                                       = "vpc-0978c5f5739ea63cb"
+    xff_header_processing_mode                                   = "append"
+    zone_id                                                      = "Z1H1FL5HABSF5"
+
+    access_logs {
+        bucket  = [90mnull[0m[0m
+        enabled = false
+        prefix  = [90mnull[0m[0m
+    }
+
+    connection_logs {
+        bucket  = [90mnull[0m[0m
+        enabled = false
+        prefix  = [90mnull[0m[0m
+    }
+
+    subnet_mapping {
+        allocation_id        = [90mnull[0m[0m
+        ipv6_address         = [90mnull[0m[0m
+        outpost_id           = [90mnull[0m[0m
+        private_ipv4_address = [90mnull[0m[0m
+        subnet_id            = "subnet-0bc826e46d46c9886"
+    }
+    subnet_mapping {
+        allocation_id        = [90mnull[0m[0m
+        ipv6_address         = [90mnull[0m[0m
+        outpost_id           = [90mnull[0m[0m
+        private_ipv4_address = [90mnull[0m[0m
+        subnet_id            = "subnet-0e579b7c00c425b47"
+    }
+}
+
+# aws_lb_listener.app_listener:
+resource "aws_lb_listener" "app_listener" {
+    arn                                                                 = "arn:aws:elasticloadbalancing:us-west-2:989886805682:listener/app/aim1-alb/fe4199549c115184/c7fb5ffbcc406647"
+    id                                                                  = "arn:aws:elasticloadbalancing:us-west-2:989886805682:listener/app/aim1-alb/fe4199549c115184/c7fb5ffbcc406647"
+    load_balancer_arn                                                   = "arn:aws:elasticloadbalancing:us-west-2:989886805682:loadbalancer/app/aim1-alb/fe4199549c115184"
+    port                                                                = 80
+    protocol                                                            = "HTTP"
+    region                                                              = "us-west-2"
+    routing_http_response_access_control_allow_credentials_header_value = [90mnull[0m[0m
+    routing_http_response_access_control_allow_headers_header_value     = [90mnull[0m[0m
+    routing_http_response_access_control_allow_methods_header_value     = [90mnull[0m[0m
+    routing_http_response_access_control_allow_origin_header_value      = [90mnull[0m[0m
+    routing_http_response_access_control_expose_headers_header_value    = [90mnull[0m[0m
+    routing_http_response_access_control_max_age_header_value           = [90mnull[0m[0m
+    routing_http_response_content_security_policy_header_value          = [90mnull[0m[0m
+    routing_http_response_server_enabled                                = true
+    routing_http_response_strict_transport_security_header_value        = [90mnull[0m[0m
+    routing_http_response_x_content_type_options_header_value           = [90mnull[0m[0m
+    routing_http_response_x_frame_options_header_value                  = [90mnull[0m[0m
+    ssl_policy                                                          = [90mnull[0m[0m
+    tags_all                                                            = {}
+
+    default_action {
+        order            = 1
+        target_group_arn = "arn:aws:elasticloadbalancing:us-west-2:989886805682:targetgroup/aim1-tg/0b9ab8aefb69a128"
+        type             = "forward"
+    }
+}
+
+# aws_lb_target_group.app_tg:
+resource "aws_lb_target_group" "app_tg" {
+    arn                                = "arn:aws:elasticloadbalancing:us-west-2:989886805682:targetgroup/aim1-tg/0b9ab8aefb69a128"
+    arn_suffix                         = "targetgroup/aim1-tg/0b9ab8aefb69a128"
+    deregistration_delay               = "300"
+    id                                 = "arn:aws:elasticloadbalancing:us-west-2:989886805682:targetgroup/aim1-tg/0b9ab8aefb69a128"
+    ip_address_type                    = "ipv4"
+    lambda_multi_value_headers_enabled = false
+    load_balancer_arns                 = []
+    load_balancing_algorithm_type      = "round_robin"
+    load_balancing_anomaly_mitigation  = "off"
+    load_balancing_cross_zone_enabled  = "use_load_balancer_configuration"
+    name                               = "aim1-tg"
+    name_prefix                        = [90mnull[0m[0m
+    port                               = 8080
+    protocol                           = "HTTP"
+    protocol_version                   = "HTTP1"
+    proxy_protocol_v2                  = false
+    region                             = "us-west-2"
+    slow_start                         = 0
+    tags                               = {
+        "Name" = "aim1-tg"
+    }
+    tags_all                           = {
+        "Name" = "aim1-tg"
+    }
+    target_type                        = "ip"
+    vpc_id                             = "vpc-0978c5f5739ea63cb"
+
+    health_check {
+        enabled             = true
+        healthy_threshold   = 3
+        interval            = 30
+        matcher             = "200-399"
+        path                = "/"
+        port                = "traffic-port"
+        protocol            = "HTTP"
+        timeout             = 5
+        unhealthy_threshold = 3
+    }
+
+    stickiness {
+        cookie_duration = 86400
+        cookie_name     = [90mnull[0m[0m
+        enabled         = false
+        type            = "lb_cookie"
+    }
+
+    target_failover {}
+
+    target_group_health {
+        dns_failover {
+            minimum_healthy_targets_count      = "1"
+            minimum_healthy_targets_percentage = "off"
+        }
+        unhealthy_state_routing {
+            minimum_healthy_targets_count      = 1
+            minimum_healthy_targets_percentage = "off"
+        }
+    }
+
+    target_health_state {}
+}
+
+# aws_security_group.alb_sg:
+resource "aws_security_group" "alb_sg" {
+    arn                    = "arn:aws:ec2:us-west-2:989886805682:security-group/sg-035e89a934bacd0fa"
+    description            = "Managed by Terraform"
+    egress                 = [
+        {
+            cidr_blocks      = [
+                "0.0.0.0/0",
+            ]
+            description      = [90mnull[0m[0m
+            from_port        = 0
+            ipv6_cidr_blocks = []
+            prefix_list_ids  = []
+            protocol         = "-1"
+            security_groups  = []
+            self             = false
+            to_port          = 0
+        },
+    ]
+    id                     = "sg-035e89a934bacd0fa"
+    ingress                = [
+        {
+            cidr_blocks      = [
+                "0.0.0.0/0",
+            ]
+            description      = [90mnull[0m[0m
+            from_port        = 80
+            ipv6_cidr_blocks = []
+            prefix_list_ids  = []
+            protocol         = "tcp"
+            security_groups  = []
+            self             = false
+            to_port          = 80
+        },
+    ]
+    name                   = "terraform-20251002100805035600000003"
+    name_prefix            = "terraform-"
+    owner_id               = "989886805682"
+    region                 = "us-west-2"
+    revoke_rules_on_delete = false
+    tags                   = {
+        "Name" = "aim1-alb-sg"
+    }
+    tags_all               = {
+        "Name" = "aim1-alb-sg"
+    }
+    vpc_id                 = "vpc-0978c5f5739ea63cb"
+}
+
+# aws_security_group.ecs_sg:
+resource "aws_security_group" "ecs_sg" {
+    arn                    = "arn:aws:ec2:us-west-2:989886805682:security-group/sg-0b4daa7efe3eebe18"
+    description            = "Managed by Terraform"
+    egress                 = [
+        {
+            cidr_blocks      = [
+                "0.0.0.0/0",
+            ]
+            description      = [90mnull[0m[0m
+            from_port        = 0
+            ipv6_cidr_blocks = []
+            prefix_list_ids  = []
+            protocol         = "-1"
+            security_groups  = []
+            self             = false
+            to_port          = 0
+        },
+    ]
+    id                     = "sg-0b4daa7efe3eebe18"
+    ingress                = [
+        {
+            cidr_blocks      = []
+            description      = [90mnull[0m[0m
+            from_port        = 8080
+            ipv6_cidr_blocks = []
+            prefix_list_ids  = []
+            protocol         = "tcp"
+            security_groups  = [
+                "sg-035e89a934bacd0fa",
+            ]
+            self             = false
+            to_port          = 8080
+        },
+    ]
+    name                   = "terraform-20251002100809611600000005"
+    name_prefix            = "terraform-"
+    owner_id               = "989886805682"
+    region                 = "us-west-2"
+    revoke_rules_on_delete = false
+    tags                   = {
+        "Name" = "aim1-ecs-sg"
+    }
+    tags_all               = {
+        "Name" = "aim1-ecs-sg"
+    }
+    vpc_id                 = "vpc-0978c5f5739ea63cb"
+}
+
+# aws_security_group.rds_sg:
+resource "aws_security_group" "rds_sg" {
+    arn                    = "arn:aws:ec2:us-west-2:989886805682:security-group/sg-0839a0d2876d77db2"
+    description            = "Managed by Terraform"
+    egress                 = [
+        {
+            cidr_blocks      = [
+                "0.0.0.0/0",
+            ]
+            description      = [90mnull[0m[0m
+            from_port        = 0
+            ipv6_cidr_blocks = []
+            prefix_list_ids  = []
+            protocol         = "-1"
+            security_groups  = []
+            self             = false
+            to_port          = 0
+        },
+    ]
+    id                     = "sg-0839a0d2876d77db2"
+    ingress                = [
+        {
+            cidr_blocks      = []
+            description      = [90mnull[0m[0m
+            from_port        = 5432
+            ipv6_cidr_blocks = []
+            prefix_list_ids  = []
+            protocol         = "tcp"
+            security_groups  = [
+                "sg-0b4daa7efe3eebe18",
+            ]
+            self             = false
+            to_port          = 5432
+        },
+    ]
+    name                   = "terraform-20251002100813476600000006"
+    name_prefix            = "terraform-"
+    owner_id               = "989886805682"
+    region                 = "us-west-2"
+    revoke_rules_on_delete = false
+    tags                   = {
+        "Name" = "aim1-rds-sg"
+    }
+    tags_all               = {
+        "Name" = "aim1-rds-sg"
+    }
+    vpc_id                 = "vpc-0978c5f5739ea63cb"
+}
+
+# null_resource.build_and_push:
+resource "null_resource" "build_and_push" {
+    id = "8210928023232304184"
+}
+
+# random_password.rds_password:
+resource "random_password" "rds_password" {
+    bcrypt_hash      = (sensitive value)
+    id               = "none"
+    length           = 16
+    lower            = true
+    min_lower        = 0
+    min_numeric      = 0
+    min_special      = 0
+    min_upper        = 0
+    number           = true
+    numeric          = true
+    override_special = "!#$%&*()-_=+[]{}<>:?"
+    result           = (sensitive value)
+    special          = true
+    upper            = true
+}
+
+
+# module.vpc.aws_default_network_acl.this[0]:
+resource "aws_default_network_acl" "this" {
+    arn                    = "arn:aws:ec2:us-west-2:989886805682:network-acl/acl-090304cdb6f90f5ad"
+    default_network_acl_id = "acl-090304cdb6f90f5ad"
+    id                     = "acl-090304cdb6f90f5ad"
+    owner_id               = "989886805682"
+    region                 = "us-west-2"
+    subnet_ids             = [
+        "subnet-0822cbd9f0720f987",
+        "subnet-0bc826e46d46c9886",
+        "subnet-0e579b7c00c425b47",
+    ]
+    tags                   = {
+        "Name" = "example-vpc-default"
+    }
+    tags_all               = {
+        "Name" = "example-vpc-default"
+    }
+    vpc_id                 = "vpc-0978c5f5739ea63cb"
+
+    egress {
+        action          = "allow"
+        cidr_block      = [90mnull[0m[0m
+        from_port       = 0
+        ipv6_cidr_block = "::/0"
+        protocol        = "-1"
+        rule_no         = 101
+        to_port         = 0
+    }
+    egress {
+        action          = "allow"
+        cidr_block      = "0.0.0.0/0"
+        from_port       = 0
+        ipv6_cidr_block = [90mnull[0m[0m
+        protocol        = "-1"
+        rule_no         = 100
+        to_port         = 0
+    }
+
+    ingress {
+        action          = "allow"
+        cidr_block      = [90mnull[0m[0m
+        from_port       = 0
+        ipv6_cidr_block = "::/0"
+        protocol        = "-1"
+        rule_no         = 101
+        to_port         = 0
+    }
+    ingress {
+        action          = "allow"
+        cidr_block      = "0.0.0.0/0"
+        from_port       = 0
+        ipv6_cidr_block = [90mnull[0m[0m
+        protocol        = "-1"
+        rule_no         = 100
+        to_port         = 0
+    }
+}
+
+# module.vpc.aws_default_route_table.default[0]:
+resource "aws_default_route_table" "default" {
+    arn                    = "arn:aws:ec2:us-west-2:989886805682:route-table/rtb-0c1ccf8c38cc199bf"
+    default_route_table_id = "rtb-0c1ccf8c38cc199bf"
+    id                     = "rtb-0c1ccf8c38cc199bf"
+    owner_id               = "989886805682"
+    region                 = "us-west-2"
+    route                  = []
+    tags                   = {
+        "Name" = "example-vpc-default"
+    }
+    tags_all               = {
+        "Name" = "example-vpc-default"
+    }
+    vpc_id                 = "vpc-0978c5f5739ea63cb"
+
+    timeouts {
+        create = "5m"
+        update = "5m"
+    }
+}
+
+# module.vpc.aws_default_security_group.this[0]:
+resource "aws_default_security_group" "this" {
+    arn                    = "arn:aws:ec2:us-west-2:989886805682:security-group/sg-0db0dfc3df7afccce"
+    description            = "default VPC security group"
+    egress                 = []
+    id                     = "sg-0db0dfc3df7afccce"
+    ingress                = []
+    name                   = "default"
+    name_prefix            = [90mnull[0m[0m
+    owner_id               = "989886805682"
+    region                 = "us-west-2"
+    revoke_rules_on_delete = false
+    tags                   = {
+        "Name" = "example-vpc-default"
+    }
+    tags_all               = {
+        "Name" = "example-vpc-default"
+    }
+    vpc_id                 = "vpc-0978c5f5739ea63cb"
+}
+
+# module.vpc.aws_eip.nat[0]:
+resource "aws_eip" "nat" {
+    allocation_id            = "eipalloc-0b2617e407333b687"
+    arn                      = "arn:aws:ec2:us-west-2:989886805682:elastic-ip/eipalloc-0b2617e407333b687"
+    association_id           = [90mnull[0m[0m
+    carrier_ip               = [90mnull[0m[0m
+    customer_owned_ip        = [90mnull[0m[0m
+    customer_owned_ipv4_pool = [90mnull[0m[0m
+    domain                   = "vpc"
+    id                       = "eipalloc-0b2617e407333b687"
+    instance                 = [90mnull[0m[0m
+    network_border_group     = "us-west-2"
+    network_interface        = [90mnull[0m[0m
+    private_ip               = [90mnull[0m[0m
+    ptr_record               = [90mnull[0m[0m
+    public_dns               = "ec2-44-254-100-13.us-west-2.compute.amazonaws.com"
+    public_ip                = "44.254.100.13"
+    public_ipv4_pool         = "amazon"
+    region                   = "us-west-2"
+    tags                     = {
+        "Name" = "example-vpc-us-west-2a"
+    }
+    tags_all                 = {
+        "Name" = "example-vpc-us-west-2a"
+    }
+}
+
+# module.vpc.aws_internet_gateway.this[0]:
+resource "aws_internet_gateway" "this" {
+    arn      = "arn:aws:ec2:us-west-2:989886805682:internet-gateway/igw-0060d7444b52905ee"
+    id       = "igw-0060d7444b52905ee"
+    owner_id = "989886805682"
+    region   = "us-west-2"
+    tags     = {
+        "Name" = "example-vpc"
+    }
+    tags_all = {
+        "Name" = "example-vpc"
+    }
+    vpc_id   = "vpc-0978c5f5739ea63cb"
+}
+
+# module.vpc.aws_nat_gateway.this[0]:
+resource "aws_nat_gateway" "this" {
+    allocation_id                      = "eipalloc-0b2617e407333b687"
+    association_id                     = "eipassoc-08b8c6b961da271ac"
+    connectivity_type                  = "public"
+    id                                 = "nat-0005ac572bbab3efa"
+    network_interface_id               = "eni-07f4a7887543b06db"
+    private_ip                         = "10.0.101.86"
+    public_ip                          = "44.254.100.13"
+    region                             = "us-west-2"
+    secondary_allocation_ids           = []
+    secondary_private_ip_address_count = 0
+    secondary_private_ip_addresses     = []
+    subnet_id                          = "subnet-0e579b7c00c425b47"
+    tags                               = {
+        "Name" = "example-vpc-us-west-2a"
+    }
+    tags_all                           = {
+        "Name" = "example-vpc-us-west-2a"
+    }
+}
+
+# module.vpc.aws_route.private_nat_gateway[0]:
+resource "aws_route" "private_nat_gateway" {
+    carrier_gateway_id          = [90mnull[0m[0m
+    core_network_arn            = [90mnull[0m[0m
+    destination_cidr_block      = "0.0.0.0/0"
+    destination_ipv6_cidr_block = [90mnull[0m[0m
+    destination_prefix_list_id  = [90mnull[0m[0m
+    egress_only_gateway_id      = [90mnull[0m[0m
+    gateway_id                  = [90mnull[0m[0m
+    id                          = "r-rtb-04106e66bcbf790481080289494"
+    instance_id                 = [90mnull[0m[0m
+    instance_owner_id           = [90mnull[0m[0m
+    local_gateway_id            = [90mnull[0m[0m
+    nat_gateway_id              = "nat-0005ac572bbab3efa"
+    network_interface_id        = [90mnull[0m[0m
+    origin                      = "CreateRoute"
+    region                      = "us-west-2"
+    route_table_id              = "rtb-04106e66bcbf79048"
+    state                       = "active"
+    transit_gateway_id          = [90mnull[0m[0m
+    vpc_endpoint_id             = [90mnull[0m[0m
+    vpc_peering_connection_id   = [90mnull[0m[0m
+
+    timeouts {
+        create = "5m"
+    }
+}
+
+# module.vpc.aws_route.public_internet_gateway[0]:
+resource "aws_route" "public_internet_gateway" {
+    carrier_gateway_id          = [90mnull[0m[0m
+    core_network_arn            = [90mnull[0m[0m
+    destination_cidr_block      = "0.0.0.0/0"
+    destination_ipv6_cidr_block = [90mnull[0m[0m
+    destination_prefix_list_id  = [90mnull[0m[0m
+    egress_only_gateway_id      = [90mnull[0m[0m
+    gateway_id                  = "igw-0060d7444b52905ee"
+    id                          = "r-rtb-048a5c9e35fa7080d1080289494"
+    instance_id                 = [90mnull[0m[0m
+    instance_owner_id           = [90mnull[0m[0m
+    local_gateway_id            = [90mnull[0m[0m
+    nat_gateway_id              = [90mnull[0m[0m
+    network_interface_id        = [90mnull[0m[0m
+    origin                      = "CreateRoute"
+    region                      = "us-west-2"
+    route_table_id              = "rtb-048a5c9e35fa7080d"
+    state                       = "active"
+    transit_gateway_id          = [90mnull[0m[0m
+    vpc_endpoint_id             = [90mnull[0m[0m
+    vpc_peering_connection_id   = [90mnull[0m[0m
+
+    timeouts {
+        create = "5m"
+    }
+}
+
+# module.vpc.aws_route_table.private[0]:
+resource "aws_route_table" "private" {
+    arn              = "arn:aws:ec2:us-west-2:989886805682:route-table/rtb-04106e66bcbf79048"
+    id               = "rtb-04106e66bcbf79048"
+    owner_id         = "989886805682"
+    propagating_vgws = []
+    region           = "us-west-2"
+    route            = []
+    tags             = {
+        "Name" = "example-vpc-private"
+    }
+    tags_all         = {
+        "Name" = "example-vpc-private"
+    }
+    vpc_id           = "vpc-0978c5f5739ea63cb"
+}
+
+# module.vpc.aws_route_table.public[0]:
+resource "aws_route_table" "public" {
+    arn              = "arn:aws:ec2:us-west-2:989886805682:route-table/rtb-048a5c9e35fa7080d"
+    id               = "rtb-048a5c9e35fa7080d"
+    owner_id         = "989886805682"
+    propagating_vgws = []
+    region           = "us-west-2"
+    route            = []
+    tags             = {
+        "Name" = "example-vpc-public"
+    }
+    tags_all         = {
+        "Name" = "example-vpc-public"
+    }
+    vpc_id           = "vpc-0978c5f5739ea63cb"
+}
+
+# module.vpc.aws_route_table_association.private[0]:
+resource "aws_route_table_association" "private" {
+    gateway_id     = [90mnull[0m[0m
+    id             = "rtbassoc-012a5539ea070ed54"
+    region         = "us-west-2"
+    route_table_id = "rtb-04106e66bcbf79048"
+    subnet_id      = "subnet-0822cbd9f0720f987"
+}
+
+# module.vpc.aws_route_table_association.private[1]:
+resource "aws_route_table_association" "private" {
+    gateway_id     = [90mnull[0m[0m
+    id             = "rtbassoc-0c0d2592add50bcad"
+    region         = "us-west-2"
+    route_table_id = "rtb-04106e66bcbf79048"
+    subnet_id      = "subnet-018aa2dbabab30a7b"
+}
+
+# module.vpc.aws_route_table_association.public[0]:
+resource "aws_route_table_association" "public" {
+    gateway_id     = [90mnull[0m[0m
+    id             = "rtbassoc-0bd77be2d825447c1"
+    region         = "us-west-2"
+    route_table_id = "rtb-048a5c9e35fa7080d"
+    subnet_id      = "subnet-0e579b7c00c425b47"
+}
+
+# module.vpc.aws_route_table_association.public[1]:
+resource "aws_route_table_association" "public" {
+    gateway_id     = [90mnull[0m[0m
+    id             = "rtbassoc-0dd053191f58af8a6"
+    region         = "us-west-2"
+    route_table_id = "rtb-048a5c9e35fa7080d"
+    subnet_id      = "subnet-0bc826e46d46c9886"
+}
+
+# module.vpc.aws_subnet.private[0]:
+resource "aws_subnet" "private" {
+    arn                                            = "arn:aws:ec2:us-west-2:989886805682:subnet/subnet-0822cbd9f0720f987"
+    assign_ipv6_address_on_creation                = false
+    availability_zone                              = "us-west-2a"
+    availability_zone_id                           = "usw2-az2"
+    cidr_block                                     = "10.0.1.0/24"
+    customer_owned_ipv4_pool                       = [90mnull[0m[0m
+    enable_dns64                                   = false
+    enable_lni_at_device_index                     = 0
+    enable_resource_name_dns_a_record_on_launch    = false
+    enable_resource_name_dns_aaaa_record_on_launch = false
+    id                                             = "subnet-0822cbd9f0720f987"
+    ipv6_cidr_block                                = [90mnull[0m[0m
+    ipv6_cidr_block_association_id                 = [90mnull[0m[0m
+    ipv6_native                                    = false
+    map_customer_owned_ip_on_launch                = false
+    map_public_ip_on_launch                        = false
+    outpost_arn                                    = [90mnull[0m[0m
+    owner_id                                       = "989886805682"
+    private_dns_hostname_type_on_launch            = "ip-name"
+    region                                         = "us-west-2"
+    tags                                           = {
+        "Name" = "example-vpc-private-us-west-2a"
+    }
+    tags_all                                       = {
+        "Name" = "example-vpc-private-us-west-2a"
+    }
+    vpc_id                                         = "vpc-0978c5f5739ea63cb"
+}
+
+# module.vpc.aws_subnet.private[1]:
+resource "aws_subnet" "private" {
+    arn                                            = "arn:aws:ec2:us-west-2:989886805682:subnet/subnet-018aa2dbabab30a7b"
+    assign_ipv6_address_on_creation                = false
+    availability_zone                              = "us-west-2b"
+    availability_zone_id                           = "usw2-az1"
+    cidr_block                                     = "10.0.2.0/24"
+    customer_owned_ipv4_pool                       = [90mnull[0m[0m
+    enable_dns64                                   = false
+    enable_lni_at_device_index                     = 0
+    enable_resource_name_dns_a_record_on_launch    = false
+    enable_resource_name_dns_aaaa_record_on_launch = false
+    id                                             = "subnet-018aa2dbabab30a7b"
+    ipv6_cidr_block                                = [90mnull[0m[0m
+    ipv6_cidr_block_association_id                 = [90mnull[0m[0m
+    ipv6_native                                    = false
+    map_customer_owned_ip_on_launch                = false
+    map_public_ip_on_launch                        = false
+    outpost_arn                                    = [90mnull[0m[0m
+    owner_id                                       = "989886805682"
+    private_dns_hostname_type_on_launch            = "ip-name"
+    region                                         = "us-west-2"
+    tags                                           = {
+        "Name" = "example-vpc-private-us-west-2b"
+    }
+    tags_all                                       = {
+        "Name" = "example-vpc-private-us-west-2b"
+    }
+    vpc_id                                         = "vpc-0978c5f5739ea63cb"
+}
+
+# module.vpc.aws_subnet.public[0]:
+resource "aws_subnet" "public" {
+    arn                                            = "arn:aws:ec2:us-west-2:989886805682:subnet/subnet-0e579b7c00c425b47"
+    assign_ipv6_address_on_creation                = false
+    availability_zone                              = "us-west-2a"
+    availability_zone_id                           = "usw2-az2"
+    cidr_block                                     = "10.0.101.0/24"
+    customer_owned_ipv4_pool                       = [90mnull[0m[0m
+    enable_dns64                                   = false
+    enable_lni_at_device_index                     = 0
+    enable_resource_name_dns_a_record_on_launch    = false
+    enable_resource_name_dns_aaaa_record_on_launch = false
+    id                                             = "subnet-0e579b7c00c425b47"
+    ipv6_cidr_block                                = [90mnull[0m[0m
+    ipv6_cidr_block_association_id                 = [90mnull[0m[0m
+    ipv6_native                                    = false
+    map_customer_owned_ip_on_launch                = false
+    map_public_ip_on_launch                        = false
+    outpost_arn                                    = [90mnull[0m[0m
+    owner_id                                       = "989886805682"
+    private_dns_hostname_type_on_launch            = "ip-name"
+    region                                         = "us-west-2"
+    tags                                           = {
+        "Name" = "example-vpc-public-us-west-2a"
+    }
+    tags_all                                       = {
+        "Name" = "example-vpc-public-us-west-2a"
+    }
+    vpc_id                                         = "vpc-0978c5f5739ea63cb"
+}
+
+# module.vpc.aws_subnet.public[1]:
+resource "aws_subnet" "public" {
+    arn                                            = "arn:aws:ec2:us-west-2:989886805682:subnet/subnet-0bc826e46d46c9886"
+    assign_ipv6_address_on_creation                = false
+    availability_zone                              = "us-west-2b"
+    availability_zone_id                           = "usw2-az1"
+    cidr_block                                     = "10.0.102.0/24"
+    customer_owned_ipv4_pool                       = [90mnull[0m[0m
+    enable_dns64                                   = false
+    enable_lni_at_device_index                     = 0
+    enable_resource_name_dns_a_record_on_launch    = false
+    enable_resource_name_dns_aaaa_record_on_launch = false
+    id                                             = "subnet-0bc826e46d46c9886"
+    ipv6_cidr_block                                = [90mnull[0m[0m
+    ipv6_cidr_block_association_id                 = [90mnull[0m[0m
+    ipv6_native                                    = false
+    map_customer_owned_ip_on_launch                = false
+    map_public_ip_on_launch                        = false
+    outpost_arn                                    = [90mnull[0m[0m
+    owner_id                                       = "989886805682"
+    private_dns_hostname_type_on_launch            = "ip-name"
+    region                                         = "us-west-2"
+    tags                                           = {
+        "Name" = "example-vpc-public-us-west-2b"
+    }
+    tags_all                                       = {
+        "Name" = "example-vpc-public-us-west-2b"
+    }
+    vpc_id                                         = "vpc-0978c5f5739ea63cb"
+}
+
+# module.vpc.aws_vpc.this[0]:
+resource "aws_vpc" "this" {
+    arn                                  = "arn:aws:ec2:us-west-2:989886805682:vpc/vpc-0978c5f5739ea63cb"
+    assign_generated_ipv6_cidr_block     = false
+    cidr_block                           = "10.0.0.0/16"
+    default_network_acl_id               = "acl-090304cdb6f90f5ad"
+    default_route_table_id               = "rtb-0c1ccf8c38cc199bf"
+    default_security_group_id            = "sg-0db0dfc3df7afccce"
+    dhcp_options_id                      = "dopt-02dc4b15e1427522d"
+    enable_dns_hostnames                 = true
+    enable_dns_support                   = true
+    enable_network_address_usage_metrics = false
+    id                                   = "vpc-0978c5f5739ea63cb"
+    instance_tenancy                     = "default"
+    ipv6_association_id                  = [90mnull[0m[0m
+    ipv6_cidr_block                      = [90mnull[0m[0m
+    ipv6_cidr_block_network_border_group = [90mnull[0m[0m
+    ipv6_ipam_pool_id                    = [90mnull[0m[0m
+    ipv6_netmask_length                  = 0
+    main_route_table_id                  = "rtb-0c1ccf8c38cc199bf"
+    owner_id                             = "989886805682"
+    region                               = "us-west-2"
+    tags                                 = {
+        "Name" = "example-vpc"
+    }
+    tags_all                             = {
+        "Name" = "example-vpc"
+    }
+}
+
+
+Outputs:
+
+app_url = "http://aim1-alb-437464140.us-west-2.elb.amazonaws.com"
+ecr_repository_url = "989886805682.dkr.ecr.us-west-2.amazonaws.com/aim1-app-repo"
+rds_db_name = "demo"
+rds_endpoint = "aim1-app-db.c1awawa0yyas.us-west-2.rds.amazonaws.com:5432"
+rds_password = (sensitive value)
+rds_username = "demodbuser"
