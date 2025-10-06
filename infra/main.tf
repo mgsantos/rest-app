@@ -382,6 +382,19 @@ resource "aws_ecs_service" "app_service" {
   }
 }
 
+#resource "local_file" "gitlab_ci" {
+#  # The content is rendered from our template file
+#  content = templatefile("${path.module}/gitlab-ci.yml.tpl", {
+#    aws_region       = var.aws_region
+#    ecr_repo_url     = aws_ecr_repository.app_repo.repository_url
+#    ecs_cluster_name = aws_ecs_cluster.app_cluster.name
+#    ecs_service_name = aws_ecs_service.app_service.name
+#  })
+#
+#  # Save the rendered file in the parent directory
+#  filename = "${path.module}/../.gitlab-ci.yml"
+#}
+
 output "app_url" {
   description = "URL to access the app via ALB"
   value       = "http://${aws_lb.app_alb.dns_name}"
@@ -411,4 +424,45 @@ output "rds_password" {
   description = "Password for the RDS database (sensitive - use with caution)"
   value       = random_password.rds_password.result
   sensitive   = true
+}
+
+
+# --- CI/CD Configuration Outputs ---
+
+# Individual outputs for easy scripting access
+output "ecs_cluster_name" {
+  description = "The name of the ECS cluster for CI/CD."
+  value       = aws_ecs_cluster.app_cluster.name
+}
+
+output "ecs_service_name" {
+  description = "The name of the ECS service for CI/CD."
+  value       = aws_ecs_service.app_service.name
+}
+
+# Combined output with instructions for manual configuration
+output "gitlab_cicd_variables" {
+  description = "Instructions for configuring your GitLab CI/CD variables."
+  value = <<EOT
+
+-------------------------------------------------------------------
+🚀 GitLab CI/CD Configuration 🚀
+
+Add the following as CI/CD variables in your GitLab project:
+Go to: Settings > CI/CD > Variables > Add variable
+
+1.  AWS_DEFAULT_REGION:
+    Value: ${var.aws_region}
+
+2.  ECR_REPO:
+    Value: ${aws_ecr_repository.app_repo.repository_url}
+
+3.  ECS_CLUSTER:
+    Value: ${aws_ecs_cluster.app_cluster.name}
+
+4.  ECS_SERVICE:
+    Value: ${aws_ecs_service.app_service.name}
+
+-------------------------------------------------------------------
+EOT
 }
