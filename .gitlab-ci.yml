@@ -15,11 +15,17 @@ build:
     - echo "Logging into ECR..."
     - apk add --no-cache aws-cli # Install AWS CLI in the container
     - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $ECR_REPO
-    - echo "Building Docker image..."
-    - docker build -t $ECR_REPO:$IMAGE_TAG -t $ECR_REPO:latest .
-    - echo "Pushing image to ECR..."
-    - docker push $ECR_REPO:$IMAGE_TAG
-    - docker push $ECR_REPO:latest
+build_image:
+  stage: build
+  image: docker:latest
+  script:
+    - echo "Logging into ECR..."
+    - apk add --no-cache aws-cli
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $ECR_REPO
+    - echo "Setting up Docker Buildx..."
+    - docker buildx create --name mybuilder --use
+    - echo "Building and pushing amd64 image to ECR..."
+    - docker buildx build --platform linux/amd64 -t $ECR_REPO:$IMAGE_TAG -t $ECR_REPO:latest --push .
 
 deploy_to_ecs:
   stage: deploy
