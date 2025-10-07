@@ -1,0 +1,34 @@
+graph TD
+    subgraph "Terraform (Infrastructure Provisioning)"
+        A[Start: Run terraform apply] --> B[Provisions AWS Infrastructure:<br/>- VPC & Subnets<br/>- RDS Instance<br/>- ECS Cluster<br/>- ECR Repository<br/>- ALB & Target Group]
+        B --> C[ALB Listener configured for App<br/>HTTP:80 -> App Target Group]
+    end
+
+    subgraph "Local GitLab (CI/CD)"
+        D[Developer pushes code to local GitLab repo] --> E[GitLab Runner executes .gitlab-ci.yml]
+        E --> F[Docker builds the application image]
+        F --> G[Docker pushes new image to AWS ECR<br/>aim1-app-repo:latest]
+    end
+
+    subgraph "AWS (Application Deployment)"
+        G --> H[ECR receives the new image version]
+        H --> I[ECS Service detects new image and starts new Fargate task]
+        I --> J[ECS Task pulls latest image from ECR]
+        J --> K[ECS Task connects to RDS & starts application]
+        C --> J
+    end
+
+    subgraph "End State"
+        L[End: App updated and accessible<br/>via http://aim1-alb-....amazonaws.com]
+        K --> L
+    end
+
+    classDef terraform fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    classDef gitlab fill:#fc6d26,stroke:#333,stroke-width:2px,color:#fff
+    classDef aws fill:#45b7d1,stroke:#333,stroke-width:2px,color:#fff
+    classDef closure fill:#96ceb4,stroke:#333,stroke-width:2px,color:#fff
+
+    class A,B,C terraform
+    class D,E,F,G gitlab
+    class H,I,J,K aws
+    class L closure
