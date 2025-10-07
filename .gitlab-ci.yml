@@ -11,8 +11,6 @@ variables:
 build:
   stage: build
   image: docker:latest # Use a Docker image to run the job
-  services:
-    - docker:dind # Docker-in-Docker service to enable building images
   script:
     - echo "Logging into ECR..."
     - apk add --no-cache aws-cli # Install AWS CLI in the container
