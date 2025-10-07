@@ -21,10 +21,11 @@ build:
     - docker push $ECR_REPO:$IMAGE_TAG
     - docker push $ECR_REPO:latest
 
-deploy:
+deploy_to_ecs:
   stage: deploy
-  image: amazon/aws-cli:latest # Use an image that has the AWS CLI
+  image: amazon/aws-cli:latest
+  entrypoint: [""]
   script:
-    - echo "Deploying to ECS..."
-    - aws ecs update-service --cluster $ECS_CLUSTER --service $ECS_SERVICE --force-new-deployment
-  when: manual # Make this a manual step to prevent accidental deploys
+    - echo "Deploying new version to ECS..."
+    - aws ecs update-service --cluster $ECS_CLUSTER_NAME --service $ECS_SERVICE_NAME --force-new-deployment --region $AWS_REGION
+    - echo "Deployment complete."
