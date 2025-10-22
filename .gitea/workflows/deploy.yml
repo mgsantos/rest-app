@@ -20,7 +20,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-         repository: http://192.168.1.50:3000/gitea/rest-app.git
+          repository: gitea/rest-app          # ← Your Gitea user/repo
+          ref: main                           # ← Your branch
+          token: ${{ secrets.GITHUB_TOKEN }}  # ← Auto-provided by Gitea Actions
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
